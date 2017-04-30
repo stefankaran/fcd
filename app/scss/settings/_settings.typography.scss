@@ -1,0 +1,32 @@
+///------------------------------------
+//    #SETTINGS
+//------------------------------------
+//-------------------------
+//    #Typography
+//    Global default settings
+//	  for typography
+//-------------------------
+
+//------FONT-FACE
+@include fontFace (Pinstripe-limo, pinstripe-limo/Pinstripe-limo, normal, normal, woff woff2);
+@include fontFace (Eidetic-serif, eidetic-serif/Eidetic-serif, normal, normal, woff woff2);
+
+//------FONT FAMILY VARIBALE
+$fontDefault            : Arial, Helvetica, Tahoma, sans-serif;
+$font-family-primary    : 'Pinstripe-limo', $fontDefault;
+$font-family-secondary  : 'Eidetic-serif', $fontDefault;
+
+// //----- Font weight
+// $font-weight-regular  : 400;
+// $font-weight-bold     : 700;
+
+//------GLOBAL FONT SETTINGS
+html {}
+body {}
+
+h1 {}
+h2 {}
+h3 {}
+
+a {}
+p {}
