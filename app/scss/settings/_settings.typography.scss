@@ -20,8 +20,13 @@ $font-family-secondary  : 'Eidetic-serif', $fontDefault;
 // $font-weight-regular  : 400;
 // $font-weight-bold     : 700;
 
+//----- Font size
+$font-size-base            : 10px;
+
 //------GLOBAL FONT SETTINGS
-html {}
+html {
+  @include font-size-vw($font-size-base, $font-size-base, $font-size-base);
+}
 body {}
 
 h1 {}
