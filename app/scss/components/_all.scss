@@ -2,6 +2,17 @@
 @import "c-buttons";
 @import "c-pagination";
 @import "c-breadcrumbs";
+@import "c-hero";
+@import "c-search";
+@import "c-newsletter";
+
+// Navigations
+@import "c-navigations/c-nav-header";
+@import "c-navigations/c-nav-footer";
+
+// Socials
+@import "c-socials/c-soc-header";
+@import "c-socials/c-soc-content";
 
 // Sliders
 @import "c-sliders/c-slick";
