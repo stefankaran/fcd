@@ -1,2 +1,50 @@
 //----- Newsletter
-.c-newsletter  {}
+.c-newsletter  {
+  @include breakpoint(desktop) {
+    float: left;
+    width: 21.5%;
+  }
+  @include breakpoint(toDesktop) {
+    margin: 0 auto;
+  }
+  @include breakpoint(tablet) {
+    width: 72%;
+  }
+
+  &__block {}
+  &__content {}
+  &__label {
+    font-family: $font-family-tertiary;
+    @include font-size(15px, 20px, 30px);
+    color: colorFunc(footer, links);
+    @include invisible(toDesktop);
+    display: block;
+    margin-bottom: 1.8rem;
+  }
+  &__input {
+    outline: none;
+    border: none;
+    height: 3.6rem;
+    width: 87%;
+    background-color: colorFunc(c-newsletter, news-footer-bg);
+    font-family: $font-family-secondary;
+    @include font-size(17px, 17.5px, 30px);
+    padding-left: 6%;
+    padding-right: 6%;
+    color: white; /////
+    @include placeholder {
+      color: colorFunc(c-newsletter, place-c);
+    }
+    @include breakpoint(tablet) {
+      width: 81%;
+      height: 4.5rem;
+    }
+    @include breakpoint(phone) {
+      width: 76%;
+      height: 7rem;
+    }
+  }
+  .icon {
+    color: white; /////
+  }
+}

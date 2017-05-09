@@ -1,2 +1,35 @@
 //----- Footer
-.b-footer {}
+.b-footer {
+  overflow: hidden;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  background-color: colorFunc(footer, bg);
+  @include breakpoint(toDesktop) {
+    text-align: center;
+  }
+  @include breakpoint(tablet) {
+    padding-top: 9rem;
+  }
+  @include breakpoint(phone) {
+    padding-top: 9.7rem;
+    padding-bottom: 10rem;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    @include breakpoint(desktop) {
+      float: left;
+      width: 18.7%;
+      margin-right: 12.5%;
+    }
+    @include breakpoint(toDesktop) {
+      width: 29%;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 8.2rem;
+    }
+    @include breakpoint(phone) {
+      margin-bottom: 13.5rem;
+    }
+  }
+}

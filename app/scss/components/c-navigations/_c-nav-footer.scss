@@ -1,2 +1,38 @@
 //----- Navigation / style only for footer nav
-.c-nav-footer {}
+.c-nav-footer {
+  display: inline-block;
+  @include breakpoint(desktop) {
+    float: left;
+    width: 37.5%;
+  }
+  @include breakpoint(tablet) {
+    margin-bottom: 4.5rem;
+  }
+  @include breakpoint(phone) {
+    margin-bottom: 7.7rem;
+  }
+
+  &__items {
+    @include breakpoint(desktop) {
+      width: 50%;
+      float: left;
+      padding-right: 5%;
+    }
+  }
+  &__item {
+    @include breakpoint(desktop) {
+      margin-bottom: 2.6rem;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(phone) {
+      margin-bottom: 5.1rem;
+    }
+  }
+  &__link {
+    font-family: $font-family-tertiary;
+    @include font-size(15px, 20px, 30px);
+    color: colorFunc(footer, links);
+  }
+}

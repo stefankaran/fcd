@@ -1,2 +1,27 @@
 //----- Navigation / style only for header nav
-.c-nav-header {}
+.c-nav-header {
+  // position: fixed;
+  // top: 12rem;
+  // width: 100%;
+  // height: 100%;
+  // background-color: colorFunc(nav-header, bg-mask);
+  // opacity: 0;
+  // visibility: hidden;
+  // 
+  // &.active { // Open Header Navigation
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+  // &__items {
+  //   background-color: colorFunc(nav-header, bg);
+  //   width: 20%;
+  //   height: 100%;
+  // }
+  &__item {}
+  &__link {
+    font-family: $font-family-primary;
+    text-transform: uppercase;
+    @include font-size(36.1px, 36.1px, 36.1px);
+    color: colorFunc(nav-header, links);
+  }
+}

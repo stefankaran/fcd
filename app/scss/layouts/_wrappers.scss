@@ -1,5 +1,70 @@
 //----- Wrappers
+// section constructor
+// example...
+// <section class="section footer-for-example"> // width default == 100% // Background colors needs to be 100%
+//   <div class="l-content"> // max-width 1600px
+//     <div class="l-d l-t l-p"> // Define wrappers inside l-contet, based on paddings, not on max-width.
+//       content
+//     </div>
+//   </div>
+// </section>
 .l {
+  @extend .center-block;
+  @extend .clearfix;
+  
+  &-main {
+    @extend .l;
+    @include breakpoint(overPhone) {
+      margin-top: 12rem;
+    }
+  }
+  &-content {
+    @extend .l;
+    @include breakpoint(desktop) {
+      max-width: $site-desk-design;
+    }
+  }
 
-  &--site {}
+  // Desktop
+  &-d { // 1200px
+    @extend .l;
+    @include breakpoint(desktop) {
+      padding-left: cp(200px, $site-desk-design);
+      padding-right: cp(200px, $site-desk-design);
+
+      &--medium { // 1050px
+        padding-left: cp(275px, $site-desk-design);
+        padding-right: cp(275px, $site-desk-design);
+      }
+      &--small { // 900px
+        padding-left: cp(350px, $site-desk-design);
+        padding-right: cp(350px, $site-desk-design);
+      }
+    }
+  }
+  // Tablet
+  &-t { // 660px
+    @extend .l;
+    @include breakpoint(tablet) {
+      padding-left: cp(54px, $site-tab-design);
+      padding-right: cp(54px, $site-tab-design);
+
+      &--small { // 550px
+        padding-left: cp(109px, $site-tab-design);
+        padding-right: cp(109px, $site-tab-design);
+      }
+    }
+  }
+  // Phone
+  &-p { // 626px
+    @extend .l;
+    @include breakpoint(phone) {
+      padding-left: cp(62px, $site-mob-design);
+      padding-right: cp(62px, $site-mob-design);
+
+      &--modified { // 688px => padding only on left side
+        padding-left: cp(62px, $site-mob-design);
+      }
+    }
+  }
 }

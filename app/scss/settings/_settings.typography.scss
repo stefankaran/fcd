@@ -30,9 +30,12 @@ html {
 }
 body {}
 
-h1 {}
-h2 {}
-h3 {}
-
-a {}
+h1 {
+  font-family: $font-family-primary;
+  @include font-size(71px, 45px, 55px);
+  @include line-height(59px, 33px, 60px);
+}
+a {
+  text-decoration: none;
+}
 p {}
