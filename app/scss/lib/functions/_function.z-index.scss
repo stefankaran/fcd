@@ -1,0 +1,13 @@
+//-------------------------
+//------FUNCTION z-index
+//  retrieve color from $z-layers map ie. `z(header)`
+//  requires settings/settings.z-index
+//-------------------------
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}

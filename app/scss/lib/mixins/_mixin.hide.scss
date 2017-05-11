@@ -2,14 +2,14 @@
 //----- Example @include hide(mobile);
 @mixin hide($name) {
   @if map-has-key($breakpoints, $name) {
-    @media #{inspect(map-get($breakpoints, $name))} {
+    @media #{map-get($breakpoints, $name)} {
       display: none;
     }
   }
 }
 @mixin invisible($name) {
   @if map-has-key($breakpoints, $name) {
-    @media #{inspect(map-get($breakpoints, $name))} {
+    @media #{map-get($breakpoints, $name)} {
       width: 0;
       height: 0;
       position: absolute;

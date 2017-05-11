@@ -1,0 +1,53 @@
+//----- Navigation trigger
+.c-nav-trigger {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12.5rem;
+  background-color: colorFunc(nav-header, trigger-bc);
+  color: colorFunc(nav-header, trigger-c);
+  cursor: pointer;
+  @include breakpoint(overPhone) {
+    width: 12rem;
+  }
+
+  &__content {
+    @include absolute(center);
+    width: 100%;
+    text-align: center;
+  }
+  &__text {
+    font-family: $font-family-tertiary;
+    @include font-size(12px, 12px, 12px);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.2rem;
+    margin-left: -0.6rem;
+    @include hide(toDesktop);
+  }
+  &__icon {
+    @include font-size(20px, 24px, 32px);
+    display: inline-block;
+    vertical-align: middle;
+    @extend .icon--hamb;
+  }
+
+  &--sticky {
+    display: none;
+    @extend .c-nav-trigger;
+    @include vendor-prefixes(box-shadow, 0px 0px 22px 1px rgba(0,0,0,0.54));
+    position: fixed;
+    width: 6.6rem;
+    height: 6.6rem;
+    top: 3rem;
+    bottom: auto;
+    left: 3rem;
+    @include breakpoint(tablet) {
+      width: 4.7rem;
+      height: 4.7rem;
+      top: 3.7rem;
+      left: 3.7rem;
+    }
+  }
+}

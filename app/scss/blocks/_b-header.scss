@@ -1,22 +1,133 @@
 //----- Header
 .b-header {
-  // position: fixed;
-  background-color: colorFunc(header, bg);
+  z-index: z(header);
 
-  &__elements {}
-  &__sticky-wrap {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 12rem;
+  &.active { // Open Navigation / Slide effect
+    @include breakpoint(desktop) {
+      &:before {
+        content: '';
+        position: fixed;
+        background-color: colorFunc(bg-mask, background);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .b-header__slide {
+      left: 0;
+    }
+    .c-nav-trigger__icon {
+      @extend .icon--close;
+    }
   }
-  &__trigger {}
-  &__trigger--mob-sticky {
+
+  &__slide {
     position: fixed;
-    background-color: colorFunc(nav-header, trigger);
-    height: 12rem;
-    width: 12rem;
+    @include vendor-prefixes(transition, all .3s);
+    background-color: colorFunc(header, bg-bottom-content);
+    width: 100%; // width == left
+    height: 100vh;
+    top: 0;
+    left: -100%; // width == left
+    z-index: z(header) + 1;
+    @include breakpoint(desktop) {
+      top: 12rem;
+      width: 49.5rem; // width == left
+      left: -49.5rem; // width == left
+    }
+    .b-header__top {
+      @include hide(desktop);
+    }
+
+    // Hide elements on Desktop
+    .c-search,
+    .c-soc-header {
+      @include hide(desktop);
+    }
+  }
+  &__top {
+    position: relative;
+    overflow: hidden;
+    height: 12.5rem;
+    background-color: colorFunc(header, bg-top);
+    @include breakpoint(overPhone) {
+      height: 12rem;
+    }
+    &--fixed-desk {
+      @include breakpoint(desktop) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    // Hide elements on mob and tablet
+    .c-search,
+    .c-soc-header {
+      @include hide(toDesktop);
+    }
+  }
+  &__bottom {
+    padding: 8.8rem 0 5.5rem;
+    position: absolute;
+    top: 12.5rem; // minus b-header__top
+    right: 0;
+    bottom: 0;
     left: 0;
-    top: 25rem;
+    overflow: auto;
+    @include breakpoint(overPhone) {
+      top: 12rem; // minus b-header__top
+    }
+    @include breakpoint(tablet) {
+      padding-top: 5.2rem;
+    }
+    @include breakpoint(desktop) {
+      top: 0;
+      padding: 7rem 0;
+    }
+
+    &.c-search--open { // Open search field on Mob and Tablet
+      overflow: hidden;
+      .c-search {
+        max-width: 63rem;
+        @include breakpoint(tablet) {
+          max-width: 55rem;
+        }
+      }
+      .c-search__mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparentize(colorFunc(c-search, mask), .1);
+      }
+      .c-search__input {
+        padding-left: 19.5rem;
+        @include breakpoint(tablet) {
+          padding-left: 13.5rem;
+        }
+      }
+      .c-search__icon {
+        left: 1.4rem;
+        @include breakpoint(tablet) {
+          left: 0.4rem;
+        }
+      }
+    }
+  }
+  &__logo {
+    @include breakpoint(toDesktop) {
+      @include absolute(center);
+      margin: 0 auto;
+      width: 28%;
+    }
+    @include breakpoint(desktop) {
+      @include absolute(center-vertical);
+      left: 18rem;
+      max-width: 15.5%;
+    }
   }
 }

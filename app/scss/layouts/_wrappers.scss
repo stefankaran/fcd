@@ -11,10 +11,10 @@
 .l {
   @extend .center-block;
   @extend .clearfix;
-  
+
   &-main {
     @extend .l;
-    @include breakpoint(overPhone) {
+    @include breakpoint(desktop) {
       margin-top: 12rem;
     }
   }

@@ -27,11 +27,11 @@
     height: 3.6rem;
     width: 87%;
     background-color: colorFunc(c-newsletter, news-footer-bg);
-    font-family: $font-family-secondary;
+    vertical-align: middle;
     @include font-size(17px, 17.5px, 30px);
     padding-left: 6%;
     padding-right: 6%;
-    color: white; /////
+    color: colorFunc(c-newsletter, input-c);
     @include placeholder {
       color: colorFunc(c-newsletter, place-c);
     }
@@ -40,11 +40,15 @@
       height: 4.5rem;
     }
     @include breakpoint(phone) {
-      width: 76%;
+      width: 76.3%;
       height: 7rem;
     }
   }
-  .icon {
-    color: white; /////
+  &__icon {
+    @include font-size(16px, 17px, 29px);
+    color: colorFunc(c-newsletter, icon);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2.2%;
   }
 }

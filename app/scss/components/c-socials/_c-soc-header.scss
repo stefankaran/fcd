@@ -1,2 +1,29 @@
 //----- Socials / style only for socials in header
-.c-soc-header {}
+.c-soc-header {
+  overflow: hidden;
+  text-align: center;
+  @include breakpoint(desktop) {
+    @include absolute(center-vertical);
+    right: 7.5rem;
+    top: 54%;
+    min-width: 10rem;
+  }
+
+  &__item {
+    @include font-size(20px, 30px, 60px);
+    color: colorFunc(c-search, c);
+    @include breakpoint(desktop) {
+      color: colorFunc(c-search, c-desk);
+    }
+    margin-right: 20.5%;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @include breakpoint(tablet) {
+      margin-right: 23.5%;
+    }
+    @include breakpoint(desktop) {
+      margin-right: 11%;
+    }
+  }
+}

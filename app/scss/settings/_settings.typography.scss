@@ -28,7 +28,9 @@ $font-size-base         : 10px;
 html {
   @include font-size-vw($font-size-base, $font-size-base, $font-size-base);
 }
-body {}
+body {
+  font-family: $font-family-secondary;
+}
 
 h1 {
   font-family: $font-family-primary;

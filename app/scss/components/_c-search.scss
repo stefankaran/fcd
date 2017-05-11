@@ -1,7 +1,72 @@
 //----- Search
 .c-search  {
+  position: relative;
+  max-width: 37.5rem;
+  margin: 0 auto;
+  z-index: z(min);
+  margin-bottom: 5.8rem;
+  color: colorFunc(c-search, c);
+  @include vendor-prefixes(transition, all .3s);
+  @include breakpoint(tablet) {
+    max-width: 22rem;
+  }
+  @include breakpoint(desktop) {
+    color: colorFunc(c-search, c-desk);
+    max-width: 11rem;
+    @include absolute(center-vertical);
+    right: 23.2rem;
+    top: 54%;
+    margin: 0;
+  }
 
   &__content {}
   &__block {}
-  &__input {}
+  &__input {
+    font-family: $font-family-tertiary;
+    width: 100%;
+    @include font-size(14px, 33px, 40px);
+    outline: none;
+    border: none;
+    border-bottom: cr(4px) solid colorFunc(c-search, c);
+    padding: 0 1rem 3rem 11.8rem;
+    color: colorFunc(c-search, c);
+    background-color: colorFunc(c-search, bg);
+    @include placeholder {
+      color: colorFunc(c-search, c);
+      @include font-size(14px, 23px, 40px);
+      @include breakpoint(desktop) {
+        color: colorFunc(c-search, c-desk);
+      }
+    }
+    &:focus {
+      @include placeholder {
+        color: colorFunc(c-search, bg);
+      }
+    }
+    @include breakpoint(tablet) {
+      border-bottom: cr(2px) solid colorFunc(c-search, c);
+      padding: 0 0 1.7rem 7rem;
+    }
+    @include breakpoint(desktop) {
+      border-bottom: cr(1px) solid colorFunc(c-search, c-desk);
+      color: colorFunc(c-search, c-desk);
+      padding: 0 0 1rem 3rem;
+    }
+  }
+  &__icon {
+    @include font-size(18px, 22px, 43px);
+    z-index: z(min) + 1;
+    position: absolute;
+    top: 1rem;
+    left: 4.1rem;
+    cursor: pointer;
+    @include breakpoint(tablet) {
+      top: 1.7rem;
+      left: 2.8rem;
+    }
+    @include breakpoint(desktop) {
+      top: 0;
+      left: -.3rem;
+    }
+  }
 }

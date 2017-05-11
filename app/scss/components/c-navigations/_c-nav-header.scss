@@ -1,27 +1,47 @@
 //----- Navigation / style only for header nav
 .c-nav-header {
-  // position: fixed;
-  // top: 12rem;
-  // width: 100%;
-  // height: 100%;
-  // background-color: colorFunc(nav-header, bg-mask);
-  // opacity: 0;
-  // visibility: hidden;
-  // 
-  // &.active { // Open Header Navigation
-  //   opacity: 1;
-  //   visibility: visible;
-  // }
-  // &__items {
-  //   background-color: colorFunc(nav-header, bg);
-  //   width: 20%;
-  //   height: 100%;
-  // }
-  &__item {}
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 5.8rem;
+  @include breakpoint(tablet) {
+    margin-bottom: 13.8rem;
+  }
+  &__items {}
+  &__item {
+    margin-bottom: 1.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 1.1rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 1.8rem;
+    }
+  }
   &__link {
     font-family: $font-family-primary;
     text-transform: uppercase;
-    @include font-size(36.1px, 36.1px, 36.1px);
+    display: block;
+    padding: 3.6rem 16.5%;
+    @include font-size(36.1px, 27px, 50px);
     color: colorFunc(nav-header, links);
+    cursor: pointer;
+    &:hover {
+      color: colorFunc(nav-header, hover-c);
+      background-color: colorFunc(nav-header, hover-bc);
+    }
+    @include breakpoint(tablet) {
+      padding: 1.7rem 6.8%;
+      &:hover {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+    }
+    @include breakpoint(desktop) {
+      padding: 0.7rem 11.5%;
+      &:hover {
+        padding-top: 6.5rem;
+        padding-bottom: 6.5rem;
+      }
+    }
   }
 }

@@ -9,66 +9,79 @@
 //-------------------------
 
 //----- Brand Main
-$brand-primary   : #1e05c9;
-$brand-secondary : #f0f0f0;
+$brand-primary        : #1e05c9;
+$brand-secondary      : #f0f0f0;
 
-$colors          : (
+$colors               : (
   //----- Elements
-  header         : ( //----- header colors
-    bg           : #f4f4f4
+  header              : ( //----- header colors
+    bg-top            : #f4f4f4,
+    bg-bottom         : #33343f,
+    bg-bottom-content : #130098
   ),
-  footer         : ( //----- footer colors
-    bg           : #0f0077,
-    links        : #fff
-  ),
-
-  nav-header     : ( //----- nav-header colors
-    bg-mask      : #33343f,
-    bg           : #130098,
-    trigger      : $brand-primary,
-    links        : #fff
+  footer              : ( //----- footer colors
+    bg                : #0f0077,
+    links             : #fff
   ),
 
-  c-newsletter     : ( //----- c-newsletter colors
-    news-footer-bg      : #0d1f87,
-    place-c      : #7781bc
+  nav-header          : ( //----- nav-header colors
+    trigger-bc        : $brand-primary,
+    trigger-c         : #fff,
+    links             : #fff,
+    hover-c           : #ef7298,
+    hover-bc          : #262628
   ),
-  link           : ( //----- Link colors
-    text         : brand-primary,
-    text-hover   : brand-primary
+
+  c-newsletter        : ( //----- c-newsletter colors
+    news-footer-bg    : #0d1f87,
+    place-c           : #7781bc,
+    input-c           : #fff,
+    icon              : #fff
   ),
-  text           : ( //----- Text colors
-    primary      : brand-primary,
-    secondary    : brand-primary
+  c-search            : ( //----- c-search colors
+    bg                : transparent,
+    c                 : #fff,
+    c-desk            : $brand-primary,
+    mask              : #130098
   ),
-  border         : ( //----- Border colors
-    primary      : brand-primary,
-    secondary    : brand-primary
+  bg-mask             : ( //----- bacground-mask colors
+    background        : #33343f
   ),
-  error          : ( //----- Error colors
-    background   : brand-primary,
-    text         : brand-primary
+  link                : ( //----- Link colors
+    text              : brand-primary,
+    text-hover        : brand-primary
   ),
-  socials        : ( //----- Socials colors
-    facebook     : #3B5998,
-    fb-messenger : #0084FF,
-    twitter      : #1DA1F2,
-    youtube      : #CD201F,
-    viber        : #7d51a0,
-    whatsapp     : #43D854
+  text                : ( //----- Text colors
+    primary           : brand-primary,
+    secondary         : brand-primary
+  ),
+  border              : ( //----- Border colors
+    primary           : brand-primary,
+    secondary         : brand-primary
+  ),
+  error               : ( //----- Error colors
+    color             : #ff0000
+  ),
+  socials             : ( //----- Socials colors
+    facebook          : #3B5998,
+    fb-messenger      : #0084FF,
+    twitter           : #1DA1F2,
+    youtube           : #CD201F,
+    viber             : #7d51a0,
+    whatsapp          : #43D854
   )
 );
 
 // //----- Variables used in the @for loop for different brand colors
 // // Example... Socials
-// $buttonsArray : facebook, fb-messenger, twitter, youtube, viber, whatsapp;
-// $buttonsLength: length($buttonsArray) + 1;
+// $buttonsArray      : facebook, fb-messenger, twitter, youtube, viber, whatsapp;
+// $buttonsLength     : length($buttonsArray) + 1;
 // // In scss file
 // .c-btn {
 // @for $soc from 1 to $buttonsLength {
-// $currentButton: nth($buttonsArray, $soc);
+// $currentButton     : nth($buttonsArray, $soc);
 // &--#{$currentButton} { // color
-// color         : colorFunc(socials, $currentButton);
+// color              : colorFunc(socials, $currentButton);
 // }
 // }
 // }
