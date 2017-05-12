@@ -8,6 +8,7 @@
   background-color: colorFunc(nav-header, trigger-bc);
   color: colorFunc(nav-header, trigger-c);
   cursor: pointer;
+  z-index: z(header) - 1;
   @include breakpoint(overPhone) {
     width: 12rem;
   }

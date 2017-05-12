@@ -12,7 +12,7 @@
 @include fontFace (Eidetic-serif, eidetic-serif/Eidetic-serif, normal, normal, woff woff2);
 
 //------FONT FAMILY VARIBALE
-$fontDefault            : Arial, Helvetica, Tahoma, sans-serif;
+$fontDefault            : Arial, sans-serif;
 $font-family-primary    : 'Pinstripe-limo', $fontDefault;
 $font-family-secondary  : 'Eidetic-serif', $fontDefault;
 $font-family-tertiary   : 'Open Sans', $fontDefault;
@@ -37,6 +37,17 @@ h1 {
   @include font-size(71px, 45px, 55px);
   @include line-height(59px, 33px, 60px);
 }
+
+//----- Reset default link color
+// h1 a,
+// h2 a,
+// h3 a {
+//   &:link,
+//   &:visited,
+//   &:active {
+//     color: colorFunc(link, default);
+//   }
+// }
 a {
   text-decoration: none;
 }

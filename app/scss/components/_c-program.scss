@@ -1,0 +1,33 @@
+//----- Program list & program object
+// Pages: Thematic, Article
+.c-program {
+  overflow: hidden;
+  float: left;
+  width: percentage(1/4);
+  position: relative;
+  outline: none;
+
+  // Wrap around c-program items
+  &-list {
+    overflow: hidden;
+  }
+
+  &__media {}
+  &__image {}
+
+  &__content {}
+  &__type {
+    @include font-size(18px, 20px, 32px);
+    @include line-height(18px, 20px, 32px);
+    color: colorFunc(c-program, text);
+  }
+  &__title {
+    font-family: $font-family-primary;
+    @include font-size(50px, 34px, 50px);
+    @include line-height(41px, 34px, 50px);
+    color: colorFunc(c-program, text);
+    a {
+      color: colorFunc(c-program, text);
+    }
+  }
+}

@@ -1,5 +1,6 @@
 //----- Header
 .b-header {
+  position: relative;
   z-index: z(header);
 
   &.active { // Open Navigation / Slide effect
@@ -118,7 +119,7 @@
       }
     }
   }
-  &__logo {
+  .c-logo {
     @include breakpoint(toDesktop) {
       @include absolute(center);
       margin: 0 auto;

@@ -31,6 +31,15 @@ $colors               : (
     hover-c           : #ef7298,
     hover-bc          : #262628
   ),
+  bg-mask             : ( //----- bacground-mask colors
+    background        : #33343f
+  ),
+
+  b-related           : ( //----- bacground-mask colors
+    title             : $brand-primary,
+    btn-prim          : #1600ab,
+    btn-sec           : #fff
+  ),
 
   c-newsletter        : ( //----- c-newsletter colors
     news-footer-bg    : #0d1f87,
@@ -44,16 +53,20 @@ $colors               : (
     c-desk            : $brand-primary,
     mask              : #130098
   ),
-  bg-mask             : ( //----- bacground-mask colors
-    background        : #33343f
+  c-media             : ( //----- media object colors
+    date              : $brand-primary,
+    title              : #000,
+    intro             : #878787
   ),
-  link                : ( //----- Link colors
-    text              : brand-primary,
-    text-hover        : brand-primary
+  c-program             : ( //----- program object colors
+    text              : #fff
   ),
-  text                : ( //----- Text colors
-    primary           : brand-primary,
-    secondary         : brand-primary
+
+  buttons             : ( //----- Buttons colors
+    hover             : transparent
+  ),
+  link                : ( //----- links colors
+    default           : #000
   ),
   border              : ( //----- Border colors
     primary           : brand-primary,
@@ -61,14 +74,6 @@ $colors               : (
   ),
   error               : ( //----- Error colors
     color             : #ff0000
-  ),
-  socials             : ( //----- Socials colors
-    facebook          : #3B5998,
-    fb-messenger      : #0084FF,
-    twitter           : #1DA1F2,
-    youtube           : #CD201F,
-    viber             : #7d51a0,
-    whatsapp          : #43D854
   )
 );
 

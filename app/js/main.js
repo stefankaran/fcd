@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
   };
 
-  // after.tpl
+  // header.tpl
   triggerActive('.c-nav-trigger', ['.b-header']);
 
 
@@ -49,5 +49,26 @@ $(document).ready(function() {
       navStickyTrigger.fadeOut();
     }
   });
+
+
+
+  $('.b-related__slider').slick({
+    responsive: [{
+      breakpoint: 99999,
+      settings: "unslick"
+    }, {
+      breakpoint: 768,
+      settings: {
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false
+      }
+    }]
+  });
+
+
+
 
 });

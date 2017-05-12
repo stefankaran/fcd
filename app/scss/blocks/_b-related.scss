@@ -1,0 +1,57 @@
+//----- Related Block
+// Pages: HomePage, Program, Partners single, Article, Fondation
+.b-related {
+  padding: 9.3rem 0 5rem;
+  @extend .clearfix;
+  @include breakpoint(tablet) {
+    padding: 7.7rem 0 6rem;
+  }
+  @include breakpoint(desktop) {
+    padding: 7rem 0 3rem;
+  }
+
+  &__title {
+    @include font-size(35px, 35px, 45px);
+    @include line-height(30px, 30px, 40px);
+    color: colorFunc(b-related, title);
+    text-align: center;
+    margin-bottom: 7.2rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 4.5rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 5.7rem;
+    }
+
+    &--small {
+      @include font-size(31px, 31px, 36px);
+      display: block;
+      font-weight: $font-weight-regular;
+    }
+  }
+
+  &__slider {
+    .slick-list {
+      padding: 0 27.5% 0 0;
+    }
+    .c-media__content {
+      @include breakpoint(phone) {
+        padding: 0 6%;
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    background-color: colorFunc(b-related, btn-prim);
+    color: colorFunc(b-related, btn-sec);
+    @include breakpoint(phone) {
+      margin-bottom: 5rem;
+    }
+    &:hover {
+      color: colorFunc(b-related, btn-prim);
+      border-color: colorFunc(b-related, btn-prim);
+    }
+  }
+}
