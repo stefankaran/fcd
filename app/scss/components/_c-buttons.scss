@@ -9,7 +9,7 @@
   font-family: $font-family-tertiary;
   font-weight: $font-weight-bold;
   @include font-size(10px, 10px, 21.7px);
-  @include line-height(25px, 14px, 25px);
+  @include line-height(15px, 14px, 25px);
   text-transform: uppercase;
   letter-spacing: 0.16rem;
   @include vendor-prefixes(transition, all .3s);

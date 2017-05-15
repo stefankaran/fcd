@@ -3,29 +3,81 @@
 .c-program {
   overflow: hidden;
   float: left;
-  width: percentage(1/4);
   position: relative;
   outline: none;
+  cursor: pointer;
+  width: 31.4rem;
+  margin-right: .1rem;
+  @include breakpoint(tablet) {
+    // width: 21.9rem;
+    width: cp(255px, 768px);
+    margin-right: cp(1px, 768px);
+    margin-bottom: cp(1px, 768px);
+  }
+  @include breakpoint(desktop) {
+    // width: 29.9rem;
+    width: cp(298.5px, 1200px);
+    margin-right: cp(1.5px, 1200px);
+    margin-bottom: cp(1.5px, 1200px);
+  }
+  &:hover {
+    .c-program__media {
+      &:after {
+        opacity: .6;
+      }
+    }
+  }
 
   // Wrap around c-program items
   &-list {
-    overflow: hidden;
+    // overflow: hidden;
   }
 
-  &__media {}
+  &__media {
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: colorFunc(c-program, hover-mask);
+      @include vendor-prefixes(transition, opacity .25s ease-in-out);
+      opacity: 0;
+    }
+  }
   &__image {}
 
-  &__content {}
+  &__content {
+    position: absolute;
+    top: 2.5rem;
+    left: 3rem;
+    right: 5rem;
+    @include breakpoint(overPhone) {
+      left: 2rem;
+    }
+    @include breakpoint(desktop) {
+      top: 4.4rem;
+    }
+  }
   &__type {
     @include font-size(18px, 20px, 32px);
     @include line-height(18px, 20px, 32px);
     color: colorFunc(c-program, text);
+    margin-bottom: 1.9rem;
+    @include breakpoint(overPhone) {
+      margin-bottom: 1.3rem;
+    }
   }
   &__title {
     font-family: $font-family-primary;
     @include font-size(50px, 34px, 50px);
     @include line-height(41px, 34px, 50px);
+    text-transform: uppercase;
     color: colorFunc(c-program, text);
+    letter-spacing: -1px;
+    // word-break: break-all;
     a {
       color: colorFunc(c-program, text);
     }

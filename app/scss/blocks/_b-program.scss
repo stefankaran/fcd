@@ -2,4 +2,89 @@
 // Pages: Thematic
 .b-program {
   @extend .clearfix;
+  background-color: colorFunc(b-program, bg);
+  padding: 10.4rem 0;
+  @include breakpoint(tablet) {
+    padding: 7.5rem 0;
+  }
+  &:nth-child(odd) {
+    .b-program__head {
+      @include breakpoint(phone) {
+        text-align: left;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    background-color: #2a69dc; //////
+    .b-program__head {
+      color: colorFunc(b-program, text-modified); /////
+    }
+  }
+
+  // Style for different layout
+  &--layout { // Same style
+    .b-program__head {
+      float: left;
+      text-align: left;
+      margin-bottom: 0;
+      padding: 9.4rem 9.4rem 0 7.5rem;
+      .b-program__title {
+        margin-bottom: 1.4rem;
+      }
+    }
+  }
+  &--layout-tab { // Style only for desktop
+    @extend .b-program--layout;
+    .b-program__head {
+      // width: 44rem;
+      width: percentage(2/3);
+      padding: 3.3rem 5.6rem 0;
+      .b-program__subtitle {
+        margin-bottom: 0;
+      }
+      .b-program__title {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &--layout-desk { // Style only for tablet
+    @extend .b-program--layout;
+    .b-program__head {
+      width: percentage(1/2);
+    }
+  }
+  // End Style for different layout
+
+  &__head {
+    color: colorFunc(b-program, text);
+    margin-bottom: 6rem;
+    text-align: center;
+    @include breakpoint(phone) {
+      padding-right: cp(62px, $site-mob-design);
+    }
+  }
+  &__subtitle {
+    @include font-size(24px, 17px, 30px);
+    @include line-height(31px, 21.5px, 14px);
+    font-weight: $font-weight-regular;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    @include font-size(50px, 34px, 50px);
+    @include line-height(40px, 34px, 41px);
+    font-weight: $font-weight-regular;
+    margin-bottom: 2.7rem;
+    letter-spacing: -1px;
+  }
+  &__intro {
+    @include font-size(18px, 18px, 34px);
+    @include line-height(21px, 28px, 61px);
+  }
+  &__slider {
+    .slick-list {
+      padding: 0 8.2% 0 0;
+    }
+  }
 }

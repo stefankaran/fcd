@@ -40,6 +40,11 @@ $colors               : (
     btn-prim          : #1600ab,
     btn-sec           : #fff
   ),
+  b-program           : ( //----- bacground-mask colors
+    bg                : $brand-secondary,
+    text              : #000,
+    text-modified     : #fff
+  ),
 
   c-newsletter        : ( //----- c-newsletter colors
     news-footer-bg    : #0d1f87,
@@ -55,11 +60,12 @@ $colors               : (
   ),
   c-media             : ( //----- media object colors
     date              : $brand-primary,
-    title              : #000,
+    title             : #000,
     intro             : #878787
   ),
-  c-program             : ( //----- program object colors
-    text              : #fff
+  c-program           : ( //----- program object colors
+    text              : #fff,
+    hover-mask        : #000
   ),
 
   buttons             : ( //----- Buttons colors

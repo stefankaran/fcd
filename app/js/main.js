@@ -52,23 +52,49 @@ $(document).ready(function() {
 
 
 
-  $('.b-related__slider').slick({
-    responsive: [{
-      breakpoint: 99999,
-      settings: "unslick"
-    }, {
-      breakpoint: 768,
-      settings: {
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false
-      }
-    }]
+//----- Init slider only on mobile
+function sliderPhone(sliderName, slideCount) {
+  $(sliderName).each(function() {
+    $(this).slick({
+      responsive: [{
+        breakpoint: 99999,
+        settings: "unslick"
+      }, {
+        breakpoint: 768,
+        settings: {
+          infinite: true,
+          slidesToShow: slideCount,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false
+        }
+      }]
+    });
   });
+}
+sliderPhone('.b-related__slider', 2);
+sliderPhone('.b-program__slider', 2);
 
+function programCount() {
+  // elements
+  var bProgram = $('.b-program');
+  var cProgram = $('.c-program');
 
+  // classes
+  var bProgramDeskLayot = ('b-program--layout-desk');
+  var bProgramTabLayot = ('b-program--layout-tab');
 
+  $(bProgram).each(function() {
+    var cProgramCount = $(this).find(cProgram).length; // c-program count in every b-program block
+    if (cProgramCount > 4 && $(window).width() >= 1024) { // Desktop condition
+      $(this).addClass(bProgramDeskLayot);
+      console.log("desk " + cProgramCount);
+    } else if (cProgramCount > 3 && ($(window).width() >= 768 && $(window).width() < 1024)) { // Tablet condition
+      $(this).addClass(bProgramTabLayot);
+      console.log("tab " + cProgramCount);
+    }
+  });
+}
+programCount();
 
 });
