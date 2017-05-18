@@ -3,4 +3,12 @@
 @import "b-footer";
 
 @import "b-related";
-@import "b-program";
+@import "b-youtubers";
+
+// b-program
+@import "b-program/b-program";
+@import "b-program/b-program--diff";
+
+// Sliders
+@import "b-slider/b-slider--video";
+@import "b-slider/b-slider--partners";

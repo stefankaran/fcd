@@ -1,0 +1,50 @@
+//----- Program list & program object with different layout
+// Pages: Thematic
+.c-program--diff {
+  overflow: hidden;
+  float: left;
+  width: percentage(1/3);
+  outline: none;
+  &:nth-of-type(3n+1) {
+    @include breakpoint(overPhone) {
+      clear: both;
+    }
+  }
+  @include breakpoint(overPhone) {
+    margin-bottom: 5rem;
+  }
+
+  // Wrap around c-program items
+  &-list {
+    overflow: hidden;
+    margin-bottom: 7rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 3rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__media {
+    cursor: pointer;
+    margin-bottom: 1.7rem;
+    @include breakpoint(desktop) {
+      margin-bottom: 5rem;
+    }
+  }
+  &__image {}
+  &__content {
+    padding: 0 4%;
+  }
+  &__title {
+    font-weight: $font-weight-regular;
+    @include font-size(36px, 25px, 28px);
+    @include line-height(36.8px, 25px, 35px);
+    text-align: center;
+    color: colorFunc(tag, primary);
+    a {
+      color: colorFunc(tag, primary);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+//----- Rotated text
+// Blocks:
+// slider--video(Video && Je'm oriente Pages),
+// youtubers(Video && Je'm oriente Pages)
+.c-rotated-text {
+  font-size: 10rem;
+  // overflow: hidden;
+  width: 100%; // IMPORTANT => You need to set max-width in every block... in that case, max width == block height
+  position: absolute;
+  top: 0;
+  opacity: .07;
+  z-index: z(min) - 1;
+
+  &__inner {
+    // white-space: nowrap;
+    @include vendor-prefixes(transform, translate(0,100%) rotate(-90deg));
+    @include vendor-prefixes(transform-origin, 0 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include breakpoint(tablet) {
+      line-height: 3.5rem;
+    }
+    @include breakpoint(desktop) {
+      line-height: 4.5rem;
+    }
+  }
+}

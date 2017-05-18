@@ -12,12 +12,20 @@
   @include line-height(15px, 14px, 25px);
   text-transform: uppercase;
   letter-spacing: 0.16rem;
+  position: relative;
+  z-index: z(min) + 1;
   @include vendor-prefixes(transition, all .3s);
-  border-radius: 1px;
+  border-radius: 1.5px;
   width: 31.3rem;
   height: 7.8rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  // @include breakpoint(phone) {
+    // padding-left: 9%;
+    // padding-right: 9%;
+  // }
+  // @include breakpoint(overPhone) {
+  //   padding-left: .5rem;
+  //   padding-right: .5rem;
+  // }
   @include breakpoint(tablet) {
     width: 14.4rem;
     height: 3.6rem;
@@ -30,4 +38,30 @@
   &:hover {
     background-color: colorFunc(buttons, hover);
   }
+
+  span {
+    @include absolute(center);
+    width: 75%;
+    @include breakpoint(overPhone) {
+      width: 95%;
+    }
+  }
+
+  // Button on video page
+  &--video {
+    display: block;
+    margin: 0 auto;
+    background-color: colorFunc(buttons, video-prim);
+    color: colorFunc(buttons, video-sec);
+    margin-bottom: 7rem;
+    @include breakpoint(overPhone) {
+      margin-bottom: 5rem;
+    }
+    &:hover {
+      color: colorFunc(buttons, video-prim);
+      border-color: colorFunc(buttons, video-prim);
+      background-color: colorFunc(buttons, video-sec);
+    }
+  }
+
 }

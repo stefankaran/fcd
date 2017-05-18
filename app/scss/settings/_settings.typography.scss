@@ -16,8 +16,10 @@ $fontDefault            : Arial, sans-serif;
 $font-family-primary    : 'Pinstripe-limo', $fontDefault;
 $font-family-secondary  : 'Eidetic-serif', $fontDefault;
 $font-family-tertiary   : 'Open Sans', $fontDefault;
+$font-family-quaternary : 'Open Sans Condensed', $fontDefault;
 
 //----- Font weight
+$font-weight-light      : 300;
 $font-weight-regular    : 400;
 $font-weight-bold       : 700;
 

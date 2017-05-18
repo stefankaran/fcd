@@ -47,6 +47,7 @@
   &__icon {
     @include font-size(16px, 17px, 29px);
     color: colorFunc(c-newsletter, icon);
+    cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     margin-left: 2.2%;

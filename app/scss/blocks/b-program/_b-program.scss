@@ -2,7 +2,7 @@
 // Pages: Thematic
 .b-program {
   @extend .clearfix;
-  background-color: colorFunc(b-program, bg);
+  background-color: colorFunc(bg-sections, primary);
   padding: 10.4rem 0;
   @include breakpoint(tablet) {
     padding: 7.5rem 0;

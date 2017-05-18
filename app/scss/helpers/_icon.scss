@@ -1,0 +1,18 @@
+//----- Global style for some icons
+.icon {
+  &--arrow {
+    &-slider {
+      @include absolute(center-vertical);
+      color: colorFunc(slider, arrows);
+      @include font-size(70px, 50px, 50px);
+      cursor: pointer;
+      z-index: z(min);
+      &.icon--arrow-left {
+        right: 101%;
+      }
+      &.icon--arrow-right {
+        left: 101%;
+      }
+    }
+  }
+}

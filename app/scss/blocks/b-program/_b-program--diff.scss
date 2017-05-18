@@ -1,0 +1,43 @@
+//----- Program Block / Different layout
+// Pages: Thematic
+.b-program--diff {
+  @extend .clearfix;
+  padding-top: 8rem;
+  @include breakpoint(desktop) {
+    padding-top: 9rem;
+  }
+  &__head {
+    @extend .b-program__head;
+    margin-bottom: 3.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 2.2rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 5.3rem;
+    }
+  }
+  &__title {
+    font-family: $font-family-primary;
+    @include font-size(60px, 40px, 55px);
+    @include line-height(54px, 40px, 40px);
+    text-transform: uppercase;
+    color: colorFunc(tag, primary);
+    margin-bottom: 3.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 1.8rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: .5rem;
+    }
+  }
+  &__intro {
+    @include font-size(18px, 18px, 37px);
+    @include line-height(28px, 28px, 50px);
+    @include breakpoint(tablet) {
+      padding: 0 6%;
+    }
+    @include breakpoint(desktop) {
+      padding: 0 18%;
+    }
+  }
+}

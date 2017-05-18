@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  sliderPhone('.b-related__slider', 2);
+  sliderPhone('.b-program__slider', 2);
+  programCount();
+
+  slider('.b-slider--video__slider', 3, 3);
+  slider('.b-slider--partners__slider', 7, 3);
+
   //----- Trigger active class
   // trigger == button
   // el      == elements where active class will be added
@@ -50,51 +57,72 @@ $(document).ready(function() {
     }
   });
 
-
-
-//----- Init slider only on mobile
-function sliderPhone(sliderName, slideCount) {
-  $(sliderName).each(function() {
-    $(this).slick({
-      responsive: [{
-        breakpoint: 99999,
-        settings: "unslick"
-      }, {
-        breakpoint: 768,
-        settings: {
-          infinite: true,
-          slidesToShow: slideCount,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false
-        }
-      }]
+  //----- Init slider only on mobile
+  function sliderPhone(sliderName, slideCount) {
+    $(sliderName).each(function() {
+      $(this).slick({
+        responsive: [{
+          breakpoint: 99999,
+          settings: "unslick"
+        }, {
+          breakpoint: 768,
+          settings: {
+            infinite: true,
+            slidesToShow: slideCount,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false
+          }
+        }]
+      });
     });
-  });
-}
-sliderPhone('.b-related__slider', 2);
-sliderPhone('.b-program__slider', 2);
+  }
 
-function programCount() {
-  // elements
-  var bProgram = $('.b-program');
-  var cProgram = $('.c-program');
+  //----- Init slider
+  function slider(sliderName, slideCountDesktop, slideCountTablet) {
+    $(sliderName).each(function() {
+      $(this).slick({
+        infinite: true,
+        slidesToShow: slideCountDesktop,
+        slidesToScroll: 1,
+        prevArrow: '<div class="icon icon--arrow-slider icon--arrow-left"></div>',
+        nextArrow: '<div class="icon icon--arrow-slider icon--arrow-right"></div>',
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: slideCountTablet
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              arrows: false
+            }
+          }
+        ]
+      });
+    });
+  }
 
-  // classes
-  var bProgramDeskLayot = ('b-program--layout-desk');
-  var bProgramTabLayot = ('b-program--layout-tab');
+  function programCount() {
+    // elements
+    var bProgram = $('.b-program');
+    var cProgram = $('.c-program');
 
-  $(bProgram).each(function() {
-    var cProgramCount = $(this).find(cProgram).length; // c-program count in every b-program block
-    if (cProgramCount > 4 && $(window).width() >= 1024) { // Desktop condition
-      $(this).addClass(bProgramDeskLayot);
-      console.log("desk " + cProgramCount);
-    } else if (cProgramCount > 3 && ($(window).width() >= 768 && $(window).width() < 1024)) { // Tablet condition
-      $(this).addClass(bProgramTabLayot);
-      console.log("tab " + cProgramCount);
-    }
-  });
-}
-programCount();
+    // classes
+    var bProgramDeskLayot = ('b-program--layout-desk');
+    var bProgramTabLayot = ('b-program--layout-tab');
+
+    $(bProgram).each(function() {
+      var cProgramCount = $(this).find(cProgram).length; // c-program count in every b-program block
+      if (cProgramCount > 4 && $(window).width() >= 1024) { // Desktop condition
+        $(this).addClass(bProgramDeskLayot);
+      } else if (cProgramCount > 3 && ($(window).width() >= 768 && $(window).width() < 1024)) { // Tablet condition
+        $(this).addClass(bProgramTabLayot);
+      }
+    });
+  }
 
 });

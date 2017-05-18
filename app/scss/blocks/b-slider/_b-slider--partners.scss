@@ -1,0 +1,75 @@
+//----- Slider Partners Block
+// Pages: Program
+.b-slider--partners {
+  @extend .clearfix;
+  background-color: colorFunc(partners, bg);
+  padding: 10rem 0;
+  @include breakpoint(tablet) {
+    padding: 7.3rem 0 8.3rem;
+  }
+  @include breakpoint(desktop) {
+    padding: 6.5rem 0 8.5rem;
+  }
+  &__title {
+    font-weight: $font-weight-regular;
+    @include font-size(49px, 35px, 50px);
+    @include line-height(37px, 37px, 40px);
+    text-align: center;
+    margin-bottom: 5.9rem;
+    @include breakpoint(desktop) {
+      margin-bottom: 4.9rem;
+    }
+    // @include breakpoint(phone) { // Exactly like on design
+    //   padding: 0 15%;
+    // }
+  }
+
+  // Additional fixes :(
+  &__slider {
+    @include breakpoint(tablet) {
+      padding: 0 9%;
+    }
+
+    .slick-list {
+      @include breakpoint(phone) {
+        padding: 0 28% 0 0;
+      }
+    }
+    .icon--arrow-slider {
+      // @include breakpoint(desktop) { // Exactly like on design
+      //   top: 17%;
+      // }
+
+      &.icon--arrow-left {
+        @include breakpoint(tablet) {
+          left: -1rem;
+          right: auto;
+        }
+      }
+      &.icon--arrow-right {
+        @include breakpoint(tablet) {
+          right: -1rem;
+          left: auto;
+        }
+      }
+    }
+  }
+  &__slide {
+    position: relative;
+    margin: 0 1.5rem;
+    &.slick-slide {
+      height: 14rem;
+      @include breakpoint(overPhone) {
+        height: 10rem;
+      }
+    }
+
+    img {
+      @include absolute(center);
+      max-height: 14rem;
+      @include breakpoint(overPhone) {
+        max-height: 10rem;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@
   width: percentage(1/2);
   margin-bottom: 3rem;
   outline: none;
+  cursor: pointer;
   @include breakpoint(overPhone) {
     width: percentage(1/4);
     margin-bottom: 0;

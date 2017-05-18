@@ -1,0 +1,185 @@
+//----- Slider Video Block
+// Pages: Je'm oriente, Video
+.b-slider--video {
+  @extend .clearfix;
+  position: relative;
+  overflow: hidden;
+  background-color: colorFunc(bg-sections, primary);
+  padding: 6.4rem 0 0;
+  margin-bottom: 1rem;
+  @include breakpoint(tablet) {
+    padding: 4.3rem 0 0;
+  }
+  @include breakpoint(desktop) {
+    padding: 7.1rem 0 0;
+  }
+  &:before {
+    content: '+';
+    font-family: $font-family-primary;
+    color: colorFunc(slider, bg-items);
+    position: absolute;
+
+    font-size: 141rem;
+    right: -33rem;
+    bottom: -50.5rem;
+    @include breakpoint(tablet) {
+      font-size: 100rem;
+      right: -19rem;
+      bottom: -37rem;
+    }
+    @include breakpoint(desktop) {
+      font-size: 162rem;
+      right: -32rem;
+      bottom: -55rem;
+    }
+  }
+
+  // &__wrap {
+    // position: relative;
+    // overflow: hidden;
+    // &:before {
+    //   content: '+';
+    //   font-family: $font-family-primary;
+    //   color: colorFunc(slider, bg-items);
+    //   position: absolute;
+    //
+    //   font-size: 141rem;
+    //   right: -33rem;
+    //   bottom: -50.5rem;
+    //   @include breakpoint(tablet) {
+    //     font-size: 100rem;
+    //     right: -19rem;
+    //     bottom: -37rem;
+    //   }
+    //   @include breakpoint(desktop) {
+    //     font-size: 162rem;
+    //     right: -32rem;
+    //     bottom: -55rem;
+    //   }
+    // }
+  // }
+  &__title {
+    @include line-height(37px, 33px, 42px);
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 3.7rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 2.6rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 4.7rem;
+    }
+
+    // This is like placeholder
+    // Same style for slider-video title and title in background with rotation
+    // Difference: font-size
+    &--unique {
+      &--big {
+        font-family: $font-family-primary;
+        font-style: normal;
+        letter-spacing: -1px;
+        display: block;
+      }
+      &--small {
+        font-family: $font-family-tertiary;
+        font-weight: $font-weight-regular;
+        letter-spacing: -2px;
+        display: block;
+        font-style: italic;
+      }
+    }
+
+    &--big {
+      @extend .b-slider--video__title--unique--big;
+      @include font-size(55px, 50px, 62px);
+    }
+    &--small {
+      @extend .b-slider--video__title--unique--small;
+      @include font-size(28px, 23px, 35px);
+    }
+
+    &__colorized {
+      color: colorFunc(tag, secondary);
+    }
+  }
+  &__slider {
+    margin-bottom: 7.3rem;
+    z-index: z(min) + 1;
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 3rem;
+    }
+
+    .slick-list {
+      @include breakpoint(phone) {
+        padding: 0 10% 0 0;
+      }
+    }
+    .icon--arrow-slider {
+      @include breakpoint(tablet) {
+        top: 6.5rem;
+      }
+      @include breakpoint(desktop) {
+        top: 11.5rem;
+      }
+    }
+  }
+
+  // Single item/slide
+  &__item {
+    overflow: hidden;
+    float: left;
+    width: percentage(1/3);
+
+    &__media {
+      cursor: pointer;
+      margin-bottom: 1.6rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 1.8rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 3.5rem;
+      }
+    }
+    &__image {}
+    &__content {
+      padding: 0 5%;
+    }
+    &__title {
+      @include font-size(36px, 18px, 28px);
+      @include line-height(36px, 18px, 35px);
+      color: colorFunc(c-media--video, title);
+      font-weight: $font-weight-regular;
+      text-align: center;
+      a {
+        color: colorFunc(c-media--video, title);
+      }
+    }
+  }
+  &__rotated {
+    text-transform: uppercase;
+    max-width: 68rem;
+    left: -2rem;
+    bottom: 6rem;
+    @include breakpoint(tablet) {
+      left: 0;
+      bottom: 2.3rem;
+    }
+    @include breakpoint(desktop) {
+      left: 5.5rem;
+      bottom: 1rem;
+    }
+
+    &__big {
+      @extend .b-slider--video__title--unique--big;
+      @include font-size(62px, 45px, 80px);
+    }
+    &__small {
+      @extend .b-slider--video__title--unique--small;
+      @include font-size(45.5px, 22px, 45px);
+    }
+  }
+}

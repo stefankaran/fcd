@@ -14,6 +14,12 @@ $brand-secondary      : #f0f0f0;
 
 $colors               : (
   //----- Elements
+  tag                 : ( //----- tag colors
+    primary           : #2a69dc,
+    secondary         : #ef7298,
+    tertiary          : #262628
+  ),
+
   header              : ( //----- header colors
     bg-top            : #f4f4f4,
     bg-bottom         : #33343f,
@@ -31,19 +37,28 @@ $colors               : (
     hover-c           : #ef7298,
     hover-bc          : #262628
   ),
+
   bg-mask             : ( //----- bacground-mask colors
     background        : #33343f
   ),
+  bg-sections         : ( //----- background sections colors
+    primary           : $brand-secondary
+  ),
 
-  b-related           : ( //----- bacground-mask colors
+  b-related           : ( //----- related block colors
     title             : $brand-primary,
     btn-prim          : #1600ab,
     btn-sec           : #fff
   ),
-  b-program           : ( //----- bacground-mask colors
-    bg                : $brand-secondary,
+  b-program           : ( //----- program block colors
     text              : #000,
     text-modified     : #fff
+  ),
+  b-youtubers         : ( //----- bacground-mask colors
+    bg-start          : #da2724,
+    bg-end            : #cb1e20,
+    item-title        : #fff,
+    title-colorized   : #fff
   ),
 
   c-newsletter        : ( //----- c-newsletter colors
@@ -63,13 +78,27 @@ $colors               : (
     title             : #000,
     intro             : #878787
   ),
+  c-media--video      : ( //----- media object video colors
+    title             : #000
+  ),
   c-program           : ( //----- program object colors
     text              : #fff,
     hover-mask        : #000
   ),
 
+  slider              : ( //----- slider, some global colors
+    arrows            : #000,
+    bg-items          : #e4e4e4
+  ),
+
+  partners            : ( //----- Partners, some global colors
+    bg                : #ffec70
+  ),
+
   buttons             : ( //----- Buttons colors
-    hover             : transparent
+    hover             : transparent,
+    video-prim        : #000,
+    video-sec         : #fff
   ),
   link                : ( //----- links colors
     default           : #000
