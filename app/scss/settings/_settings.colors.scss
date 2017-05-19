@@ -115,6 +115,16 @@ $colors               : (
   ),
 
   //----- Pages
+  // hp
+  hp                  : ( //----- program category colors
+    nws-bg            : $brand-primary,
+    nws-text          : #fff,
+    nws-input-bg      : #1644d6,
+
+    partners-title    : #626262,
+    partners-btn-prim : #fff,
+    partners-btn-sec  : #000
+  ),
   // Program
   program-category    : ( //----- program category colors
     text              : #000,

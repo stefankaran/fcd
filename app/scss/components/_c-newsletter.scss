@@ -1,25 +1,11 @@
 //----- Newsletter
 .c-newsletter  {
-  @include breakpoint(desktop) {
-    float: left;
-    width: 21.5%;
-  }
-  @include breakpoint(toDesktop) {
-    margin: 0 auto;
-  }
-  @include breakpoint(tablet) {
-    width: 72%;
-  }
 
   &__block {}
   &__content {}
   &__label {
-    font-family: $font-family-tertiary;
-    @include font-size(15px, 20px, 30px);
     color: colorFunc(footer, links);
-    @include invisible(toDesktop);
     display: block;
-    margin-bottom: 1.8rem;
   }
   &__input {
     outline: none;
@@ -45,7 +31,7 @@
     }
   }
   &__icon {
-    @include font-size(16px, 17px, 29px);
+    @include font-size(18px, 18px, 29px);
     color: colorFunc(c-newsletter, icon);
     cursor: pointer;
     display: inline-block;

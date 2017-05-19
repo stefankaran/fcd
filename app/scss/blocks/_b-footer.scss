@@ -33,4 +33,24 @@
       margin-bottom: 13.5rem;
     }
   }
+
+  .c-newsletter {
+    @include breakpoint(desktop) {
+      float: left;
+      width: 21.5%;
+    }
+    @include breakpoint(toDesktop) {
+      margin: 0 auto;
+    }
+    @include breakpoint(tablet) {
+      width: 72%;
+    }
+
+    &__label {
+      font-family: $font-family-tertiary;
+      @include font-size(15px, 20px, 30px);
+      @include invisible(toDesktop);
+      margin-bottom: 1.8rem;
+    }
+  }
 }

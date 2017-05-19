@@ -1,4 +1,68 @@
 //----- HP Newsletter Block
-.hp-newletter {
+.hp-newsletter {
+  background-color: colorFunc(hp, nws-bg);
+  text-align: center;
+  padding: 9.5rem 0 10rem;
+  @include breakpoint(tablet) {
+    padding: 7.5rem 0;
+  }
+  @include breakpoint(desktop) {
+    padding: 7.5rem 0 4rem;
+  }
 
+  &__body {
+    @include breakpoint(tablet) {
+      padding: 0 14%;
+    }
+    @include breakpoint(desktop) {
+      padding: 0 10%;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 6rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 7rem;
+    }
+
+    &__text {
+      @include font-size(20.8px, 22px, 35px);
+      color: colorFunc(hp, nws-text);
+    }
+    &__link {
+      font-family: $font-family-tertiary;
+      font-weight: $font-weight-bold;
+      @include font-size(17.8px, 20px, 30px);
+      color: colorFunc(hp, nws-text);
+      border-bottom: 1px solid;
+    }
+  }
+
+  .c-newsletter__label {
+    @include font-size(32.75px, 32px, 45px);
+    @include line-height(30.21px, 38px, 55px);
+    margin-bottom: 6.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .c-newsletter__input {
+    background-color: colorFunc(hp, nws-input-bg);
+    @include breakpoint(desktop) {
+      width: 36.5%;
+      padding-left: 2%;
+      margin-left: 1.5rem;
+    }
+  }
+  .c-newsletter__icon {
+    @include breakpoint(desktop) {
+      margin-left: .5%;      
+    }
+  }
 }
