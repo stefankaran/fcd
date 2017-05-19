@@ -1,0 +1,142 @@
+//----- HP Viewer Block
+.hp-viewer {
+  position: relative;
+
+  &__top {
+    position: relative;
+  }
+
+  &__media {
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__headings {
+    color: colorFunc(hp, viewer-text);
+    @include absolute(center-horizontal);
+    width: 100%;
+    text-align: center;
+    top: 13%;
+    @include breakpoint(tablet) {
+      top: 10%;
+    }
+    @include breakpoint(desktop) {
+      top: 19%;
+    }
+  }
+  &__surtitle {
+    @include font-size(31px, 28px, 28px);
+    @include line-height(35px, 35px, 35px);
+    margin-bottom: 3.5rem;
+    @include breakpoint(desktop) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__title {
+    @include font-size(60px, 35px, 45px);
+    @include line-height(57px, 32px, 50px);
+    margin-bottom: 3rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__subtitle {
+    @include font-size(24px, 24px, 30px);
+    @include line-height(28px, 28px, 35px);
+  }
+
+  &__btns {
+    overflow: hidden;
+    width: 100%;
+    @include breakpoint(phone) {
+      margin-bottom: 1rem;
+    }
+    @include breakpoint(overPhone) {
+      @include absolute(center-horizontal);
+    }
+    @include breakpoint(tablet) {
+      bottom: 11%;
+    }
+    @include breakpoint(desktop) {
+      bottom: 21.8%;
+    }
+
+    &-wrap {
+      overflow: hidden;
+      @include breakpoint(tablet) {
+        padding: 0 16.6%;
+      }
+      @include breakpoint(desktop) {
+        padding: 0 17.3%;
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    color: white; /////
+    float: left;
+    width: percentage(1/3);
+    height: 14rem;
+    @include breakpoint(tablet) {
+      height: 8rem;
+    }
+    @include breakpoint(desktop) {
+      height: 14.5rem;
+      width: cp(258px, 780px);
+      margin-right: cp(3px, 780px);
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      .hp-viewer__btn__dot {
+        bottom: 5%;
+      }
+    }
+
+    &--primary {
+      background-color: colorFunc(tag, primary);
+      color: colorFunc(hp, viewer-btn-prim);
+    }
+    &--secondary {
+      background-color: colorFunc(tag, secondary);
+      color: colorFunc(hp, viewer-btn-sec);
+    }
+    &--tertiary {
+      background-color: colorFunc(tag, tertiary);
+      color: colorFunc(hp, viewer-btn-tert);
+    }
+
+    &__text {
+      font-family: $font-family-primary;
+      @include font-size(28.5px, 17.4px, 30px);
+      @include line-height(24px, 14.6px, 25px);
+      text-transform: uppercase;
+      text-align: center;
+      @include absolute(center-horizontal);
+      top: 27%;
+      width: 80%;
+      @include breakpoint(desktop) {
+        top: 31%;
+        // @include absolute(center);
+        // top: 48%;
+      }
+    }
+    &__dot {
+      @include absolute(center-horizontal);
+      bottom: 17%;
+      @include font-size(20px, 12px, 20px);
+      @include vendor-prefixes(transition, .1s);
+      @include breakpoint(tablet) {
+        bottom: 16%;
+      }
+    }
+  }
+}
