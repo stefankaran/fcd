@@ -1,6 +1,6 @@
 //----- Program Block
-// Pages: Thematic
-.b-program {
+// Pages: Programs(Thematic)
+.program-category {
   @extend .clearfix;
   background-color: colorFunc(bg-sections, primary);
   padding: 10.4rem 0;
@@ -8,7 +8,7 @@
     padding: 7.5rem 0;
   }
   &:nth-child(odd) {
-    .b-program__head {
+    .program-category__head {
       @include breakpoint(phone) {
         text-align: left;
       }
@@ -17,47 +17,47 @@
 
   &:nth-child(even) {
     background-color: #2a69dc; //////
-    .b-program__head {
-      color: colorFunc(b-program, text-modified); /////
+    .program-category__head {
+      color: colorFunc(program-category, text-modified); /////
     }
   }
 
   // Style for different layout
   &--layout { // Same style
-    .b-program__head {
+    .program-category__head {
       float: left;
       text-align: left;
       margin-bottom: 0;
       padding: 9.4rem 9.4rem 0 7.5rem;
-      .b-program__title {
+      .program-category__title {
         margin-bottom: 1.4rem;
       }
     }
   }
   &--layout-tab { // Style only for desktop
-    @extend .b-program--layout;
-    .b-program__head {
+    @extend .program-category--layout;
+    .program-category__head {
       // width: 44rem;
       width: percentage(2/3);
       padding: 3.3rem 5.6rem 0;
-      .b-program__subtitle {
+      .program-category__subtitle {
         margin-bottom: 0;
       }
-      .b-program__title {
+      .program-category__title {
         margin-bottom: 2rem;
       }
     }
   }
   &--layout-desk { // Style only for tablet
-    @extend .b-program--layout;
-    .b-program__head {
+    @extend .program-category--layout;
+    .program-category__head {
       width: percentage(1/2);
     }
   }
   // End Style for different layout
 
   &__head {
-    color: colorFunc(b-program, text);
+    color: colorFunc(program-category, text);
     margin-bottom: 6rem;
     text-align: center;
     @include breakpoint(phone) {

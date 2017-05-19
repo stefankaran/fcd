@@ -137,15 +137,15 @@
 
   &__rotated {
     font-family: $font-family-tertiary;
-    max-width: 15rem;
-    right: 1.5rem;
+    max-width: 14rem;
+    right: 2.5rem;
     bottom: 10rem;
     @include breakpoint(tablet) {
-      right: -1rem;
+      right: 0;
       bottom: 4.2rem;
     }
     @include breakpoint(desktop) {
-      right: 7rem;
+      right: 8rem;
       bottom: 12.5rem;
     }
 

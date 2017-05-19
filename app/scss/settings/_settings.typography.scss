@@ -17,6 +17,7 @@ $font-family-primary    : 'Pinstripe-limo', $fontDefault;
 $font-family-secondary  : 'Eidetic-serif', $fontDefault;
 $font-family-tertiary   : 'Open Sans', $fontDefault;
 $font-family-quaternary : 'Open Sans Condensed', $fontDefault;
+$font-family-quinary    : 'Cormorant', $fontDefault;
 
 //----- Font weight
 $font-weight-light      : 300;
@@ -38,6 +39,8 @@ h1 {
   font-family: $font-family-primary;
   @include font-size(71px, 45px, 55px);
   @include line-height(59px, 33px, 60px);
+  text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 //----- Reset default link color

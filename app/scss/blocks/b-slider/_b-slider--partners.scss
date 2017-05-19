@@ -36,17 +36,20 @@
       }
     }
     .icon--arrow-slider {
+      color: colorFunc(slider, arrows-prim);
       // @include breakpoint(desktop) { // Exactly like on design
       //   top: 17%;
       // }
 
       &.icon--arrow-left {
+        right: 101%;
         @include breakpoint(tablet) {
           left: -1rem;
           right: auto;
         }
       }
       &.icon--arrow-right {
+        left: 101%;
         @include breakpoint(tablet) {
           right: -1rem;
           left: auto;

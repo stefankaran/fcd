@@ -1,11 +1,13 @@
 $(document).ready(function() {
 
   sliderPhone('.b-related__slider', 2);
-  sliderPhone('.b-program__slider', 2);
+  sliderPhone('.program-category__slider', 2);
   programCount();
 
-  slider('.b-slider--video__slider', 3, 3);
-  slider('.b-slider--partners__slider', 7, 3);
+  sliderCustom('.b-slider--video__slider', 3, 3);
+  sliderCustom('.b-slider--partners__slider', 7, 3);
+
+  // sliderHero('.c-hero');
 
   //----- Trigger active class
   // trigger == button
@@ -78,8 +80,21 @@ $(document).ready(function() {
     });
   }
 
-  //----- Init slider
-  function slider(sliderName, slideCountDesktop, slideCountTablet) {
+  // //----- Slider Hero
+  function sliderHero(sliderName) {
+    $(sliderName).each(function() {
+      $(this).slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<div class="icon icon--arrow-slider icon--arrow-left"></div>',
+        nextArrow: '<div class="icon icon--arrow-slider icon--arrow-right"></div>',
+      });
+    });
+  }
+
+  //----- Init slider with custom fun
+  function sliderCustom(sliderName, slideCountDesktop, slideCountTablet) {
     $(sliderName).each(function() {
       $(this).slick({
         infinite: true,
@@ -108,15 +123,15 @@ $(document).ready(function() {
 
   function programCount() {
     // elements
-    var bProgram = $('.b-program');
+    var bProgram = $('.program-category');
     var cProgram = $('.c-program');
 
     // classes
-    var bProgramDeskLayot = ('b-program--layout-desk');
-    var bProgramTabLayot = ('b-program--layout-tab');
+    var bProgramDeskLayot = ('program-category--layout-desk');
+    var bProgramTabLayot = ('program-category--layout-tab');
 
     $(bProgram).each(function() {
-      var cProgramCount = $(this).find(cProgram).length; // c-program count in every b-program block
+      var cProgramCount = $(this).find(cProgram).length; // c-program count in every program-category block
       if (cProgramCount > 4 && $(window).width() >= 1024) { // Desktop condition
         $(this).addClass(bProgramDeskLayot);
       } else if (cProgramCount > 3 && ($(window).width() >= 768 && $(window).width() < 1024)) { // Tablet condition

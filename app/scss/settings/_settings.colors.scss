@@ -45,20 +45,22 @@ $colors               : (
     primary           : $brand-secondary
   ),
 
+  b-hero              : ( //----- hero block colors
+    intro             : #fff
+  ),
   b-related           : ( //----- related block colors
     title             : $brand-primary,
     btn-prim          : #1600ab,
     btn-sec           : #fff
   ),
-  b-program           : ( //----- program block colors
-    text              : #000,
-    text-modified     : #fff
-  ),
-  b-youtubers         : ( //----- bacground-mask colors
+  b-youtubers         : ( //----- Youtubers block colors
     bg-start          : #da2724,
     bg-end            : #cb1e20,
     item-title        : #fff,
     title-colorized   : #fff
+  ),
+  b-download          : ( //----- Download block colors
+    c                 : #3a3d74
   ),
 
   c-newsletter        : ( //----- c-newsletter colors
@@ -87,7 +89,8 @@ $colors               : (
   ),
 
   slider              : ( //----- slider, some global colors
-    arrows            : #000,
+    arrows-prim       : #000,
+    arrows-sec        : #fff,
     bg-items          : #e4e4e4
   ),
 
@@ -109,6 +112,13 @@ $colors               : (
   ),
   error               : ( //----- Error colors
     color             : #ff0000
+  ),
+
+  //----- Pages
+  // Program
+  program-category    : ( //----- program category colors
+    text              : #000,
+    text-modified     : #fff
   )
 );
 
