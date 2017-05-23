@@ -1,0 +1,295 @@
+//----- HP Tag Primary -- "Egalite des chanches"
+.hp-tag--primary {
+  overflow: hidden;
+  @include breakpoint(phone) {
+    background-color: colorFunc(hp, tag-prim-bc);
+    padding-bottom: 4rem;
+  }
+
+  // Reset wrappers
+  .l-d {
+    @include breakpoint(desktop) {
+      padding-right: 0;
+    }
+  }
+  .l-t {
+    @include breakpoint(tablet) {
+      padding-right: 0;
+    }
+  }
+
+  &__body {
+    // display: inline-block;
+    width: 100%;
+    position: relative;
+    @extend .c-line;
+    @include breakpoint(tablet) {
+      padding-left: 4rem;
+    }
+    @include breakpoint(desktop) {
+      padding-left: 7.5rem;
+    }
+    &:after {
+      @include breakpoint(tablet) {
+        top: 10rem;
+      }
+      @include breakpoint(desktop) {
+        top: 23.5rem;
+      }
+    }
+
+    // Everywhere dot is inline with heading, except in first article
+    .c-dot.hp-tag--primary__body__dot {
+      @include breakpoint(tablet) {
+        top: 10rem;
+        left: -1rem;
+      }
+      @include breakpoint(desktop) {
+        top: 23.5rem;
+        left: -2rem;
+      }
+    }
+    .c-dot__circle {
+      background-color: colorFunc(hp, tag-prim-1-details);
+    }
+  }
+
+  // Background with full width
+  &__bg-helper {
+    &:after {
+      @include breakpoint(overPhone) {
+        content: '';
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        display: block;
+        position: absolute;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    @include font-size(71px, 34px, 70px);
+    @include line-height(52px, 24px, 70px);
+    color: colorFunc(hp, tag-prim-1-details);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__items {}
+  &__item {
+    @extend .clearfix;
+    width: 100%;
+    position: relative;
+    @include breakpoint(phone) {
+      margin-bottom: 1rem;
+      background-color: colorFunc(hp,tag-prim-item-bc);
+    }
+
+    // Every odd item && and elements inside
+    &:nth-of-type(odd) {
+      a {
+        color: colorFunc(hp, tag-prim-text-prim);
+      }
+      .hp-tag--primary__item__content {
+        @extend .hp-tag--primary__bg-helper;
+        &:after {
+          left: -100vw;
+        }
+      }
+    }
+
+    // Every even item && and elements inside
+    &:nth-of-type(even) {
+      a {
+        color: colorFunc(hp, tag-prim-text-sec);
+      }
+      .hp-tag--primary__item__media {
+        @extend .hp-tag--primary__bg-helper;
+        &:after {
+          right: -100vw;
+        }
+      }
+    }
+
+    // Unique color for every article :(
+    &--1 {
+      .hp-tag--primary__item__content-wrap {
+        @include breakpoint(desktop) {
+          top: 56%;
+        }
+      }
+      .hp-tag--primary__item__content {
+        background-color: colorFunc(hp, tag-prim-1-bg);
+        &:after {
+          background-color: colorFunc(hp, tag-prim-1-bg);
+        }
+      }
+      .c-dot {
+        display: none;
+      }
+      .hp-tag--primary__item__btn {
+        background-color: colorFunc(hp, tag-btn-prim);
+        color: colorFunc(hp, tag-btn-sec);
+        &:hover {
+          background-color: colorFunc(hp, tag-btn-sec);
+          color: colorFunc(hp, tag-btn-prim);
+        }
+      }
+    }
+    &--2 {
+      .hp-tag--primary__item__media {
+        background-color: colorFunc(hp, tag-prim-2-details);
+        &:after {
+          background-color: colorFunc(hp, tag-prim-2-details);
+        }
+      }
+      .c-dot__circle {
+        background-color: colorFunc(hp, tag-prim-2-details);
+      }
+      .hp-tag--primary__item__btn {
+        background-color: colorFunc(hp, tag-prim-2-details);
+        color: colorFunc(hp, tag-btn-prim);
+        &:hover {
+          background-color: colorFunc(hp, tag-btn-prim);
+          color: colorFunc(hp, tag-prim-2-details);
+          border-color: colorFunc(hp, tag-prim-2-details);
+        }
+      }
+    }
+    &--3 {
+      .hp-tag--primary__item__content {
+        background-color: colorFunc(hp, tag-prim-3-bg);
+        &:after {
+          background-color: colorFunc(hp, tag-prim-3-bg);
+        }
+      }
+      .c-dot__circle {
+        background-color: colorFunc(hp, tag-prim-3-details);
+      }
+      .hp-tag--primary__item__btn {
+        background-color: colorFunc(hp, tag-prim-3-details);
+        color: colorFunc(hp, tag-btn-sec);
+        &:hover {
+          background-color: colorFunc(hp, tag-btn-sec);
+          color: colorFunc(hp, tag-btn-prim);
+        }
+      }
+    }
+    &--4 {
+      .hp-tag--primary__item__media {
+        background-color: colorFunc(hp, tag-prim-4-details);
+        &:after {
+          background-color: colorFunc(hp, tag-prim-4-details);
+        }
+      }
+      .c-dot__circle {
+        background-color: colorFunc(hp, tag-prim-4-details);
+      }
+      .hp-tag--primary__item__btn {
+        background-color: colorFunc(hp, tag-prim-4-details);
+        color: colorFunc(hp, tag-btn-prim);
+        &:hover {
+          background-color: colorFunc(hp, tag-btn-prim);
+          color: colorFunc(hp, tag-prim-4-details);
+          border-color: colorFunc(hp, tag-prim-4-details);
+        }
+      }
+    }
+
+    &__col {
+      position: relative;
+      float: left;
+      @include breakpoint(phone) {
+        min-height: 54rem;
+        width: 100%;
+      }
+      @include breakpoint(tablet) {
+        height: 30.3rem;
+      }
+      @include breakpoint(desktop) {
+        height: 58.5rem;
+      }
+    }
+    &__content {
+      @include breakpoint(tablet) {
+        width: 43%;
+      }
+      @include breakpoint(desktop) {
+        width: 39.5%;
+      }
+      &-wrap {
+        @include absolute(center);
+        width: 67.5%;
+        z-index: z(min);
+        @include breakpoint(overPhone) {
+          width: 100%;
+        }
+        @include breakpoint(tablet) {
+          top: 51.5%;
+          padding-right: 5%;
+        }
+        @include breakpoint(desktop) {
+          padding-right: 25%;
+        }
+      }
+    }
+    &__subtitle {
+      @include font-size(18px, 14px, 30px);
+      font-style: italic;
+      font-weight: $font-weight-regular;
+      margin-bottom: .25rem;
+    }
+    &__title {
+      position: relative;
+      @include font-size(36px, 30px, 50px);
+      @include line-height(35px, 30px, 40px);
+      margin-bottom: 3.5rem;
+      @include breakpoint(overPhone) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__intro {
+      @include font-size(18px, 18px, 18px);
+      @include line-height(19.7px, 20px, 20px);
+      @include invisible(toDesktop);
+      margin-bottom: 4rem;
+    }
+    &__btn {
+      display: inline-block;
+    }
+
+    &__media {
+      @include breakpoint(tablet) {
+        width: 57%;
+      }
+      @include breakpoint(desktop) {
+        width: 60.5%;
+      }
+      &-wrap {
+        @include absolute(center);
+        width: 84%;
+        @include breakpoint(tablet) {
+          width: 72%;
+        }
+      }
+    }
+    &__img {
+      margin: 0 auto;
+      @include vendor-prefixes(transition, all .3s ease-in);
+      &:hover {
+        @include vendor-prefixes(transform, scale(.8));
+      }
+    }
+  }
+  .c-dot {
+    @include breakpoint(tablet) {
+      left: -5rem;
+    }
+  }
+}

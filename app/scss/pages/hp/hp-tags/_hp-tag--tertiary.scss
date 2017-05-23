@@ -1,0 +1,218 @@
+//----- HP Tag Tertiary -- "Je m'oriente"
+.hp-tag--tertiary {
+  background-color: colorFunc(tag, tertiary);
+  color: colorFunc(hp, tag-ter-text);
+
+  &__body {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    @extend .c-line;
+    @include breakpoint(phone) {
+      padding: 9rem 0 7rem 9%;
+    }
+    @include breakpoint(tablet) {
+      padding: 7.5rem 5.5rem 5.2rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 10rem 0 16.5rem 7.5rem;
+    }
+  }
+
+  &__head {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    @include breakpoint(phone) {
+      padding-right: 20%;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 4.7rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__title {
+    font-family: $font-family-primary;
+    @include font-size(60px, 34px, 70px);
+    text-transform: uppercase;
+    color: colorFunc(tag, secondary);
+    position: relative;
+    @include breakpoint(phone) {
+      margin-bottom: 8rem;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(desktop) {
+      float: left;
+    }
+  }
+  &__btns {
+    @include breakpoint(desktop) {
+      float: right;
+      margin-top: -1.5rem;
+    }
+
+    &__title {
+      font-family: $font-family-tertiary;
+      @include font-size(11px, 15px, 40px);
+      color: colorFunc(tag, secondary);
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      margin-bottom: 7.5rem;
+      @include breakpoint(overPhone) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__btn {
+    display: block;
+    background-color: colorFunc(tag, secondary);
+    color: colorFunc(tag, tertiary);
+    @include breakpoint(phone) {
+      margin-bottom: 8rem;
+    }
+    @include breakpoint(tablet) {
+      margin-right: 2.5rem;
+    }
+    @include breakpoint(overPhone) {
+      display: inline-block;
+    }
+    @include breakpoint(desktop) {
+      margin-right: 2.5rem;
+    }
+    &:hover {
+      color: colorFunc(tag, secondary);
+      border-color: colorFunc(tag, secondary);
+    }
+
+    &:last-of-type {
+      @include breakpoint(desktop) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__items {
+
+    &__small {
+      @include breakpoint(desktop) {
+        float: left;
+        width: 40%;
+        margin-top: 6.5rem;
+      }
+    }
+  }
+  &__slider {
+    .slick-list {
+      padding: 0 30% 0 0;
+    }
+  }
+  &__item {
+
+    &--big {
+      @include breakpoint(phone) {
+        padding-right: 20%;
+        margin-bottom: 8.5rem;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 4.3rem;
+      }
+      @include breakpoint(desktop) {
+        float: left;
+        width: 53.3%;
+        margin-right: 6.7%;
+      }
+
+      .hp-tag--tertiary__item__type {
+        @include font-size(18px, 20px, 30px);
+      }
+      .hp-tag--tertiary__item__title {
+        @include font-size(36px, 30px, 50px);
+        margin-bottom: 4rem;
+        @include breakpoint(tablet) {
+          margin-bottom: 1.5rem;
+        }
+        @include breakpoint(desktop) {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+    &--small {
+      @include breakpoint(phone) {
+        margin-right: 2%;
+      }
+      @include breakpoint(overPhone) {
+        float: left;
+      }
+      @include breakpoint(tablet) {
+        width: 40.5%;
+        margin-bottom: 2rem;
+      }
+      @include breakpoint(desktop) {
+        width: 48.5%;
+        margin-bottom: .5rem;
+      }
+      &:nth-of-type(odd) {
+        @include breakpoint(tablet) {
+          margin-right: 19%;
+        }
+        @include breakpoint(desktop) {
+          margin-right: 2.5%;
+        }
+      }
+
+      .hp-tag--tertiary__item__type {
+        @include font-size(13px, 18px, 30px);
+        @include breakpoint(desktop) {
+          margin-bottom: .5rem;
+        }
+      }
+      .hp-tag--tertiary__item__title {
+        @include font-size(23px, 23px, 45px);
+        margin-bottom: 3rem;
+        @include breakpoint(phone) {
+          margin-top: -0.5rem;
+        }
+        @include breakpoint(overPhone) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &__type {
+      color: colorFunc(tag, secondary);
+    }
+    &__title {
+      a {
+        color: colorFunc(hp, tag-ter-text);
+      }
+    }
+    &__media {
+      margin-bottom: 3rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 1.5rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__img {}
+    &__intro {
+      @include font-size(16px, 20px, 35px);
+      @include line-height(19.4px, 28px, 45px);
+      a {
+        color: colorFunc(hp, tag-sec-text);
+      }
+    }
+  }
+  .c-dot {
+    background-color: transparentize(colorFunc(c-dot, bc-sec), .8);
+    border-color: transparentize(colorFunc(c-dot, bc-sec), .78);
+  }
+  .c-dot__circle {
+    background-color: colorFunc(tag, secondary);
+  }
+}

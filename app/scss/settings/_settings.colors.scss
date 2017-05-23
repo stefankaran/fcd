@@ -9,144 +9,167 @@
 //-------------------------
 
 //----- Brand Main
-$brand-primary        : #1e05c9;
-$brand-secondary      : #f0f0f0;
+$brand-primary         : #1e05c9;
+$brand-secondary       : #f0f0f0;
 
-$colors               : (
+$colors                : (
   //----- Elements
-  tag                 : ( //----- tag colors
-    primary           : #2a69dc,
-    secondary         : #ef7298,
-    tertiary          : #262628
+  tag                  : ( //----- tag colors
+    primary            : #2a69dc,
+    secondary          : #ef7298,
+    tertiary           : #262628
   ),
 
-  header              : ( //----- header colors
-    bg-top            : #f4f4f4,
-    bg-bottom         : #33343f,
-    bg-bottom-content : #130098
+  header               : ( //----- header colors
+    bg-top             : #f4f4f4,
+    bg-bottom          : #33343f,
+    bg-bottom-content  : #130098
   ),
-  footer              : ( //----- footer colors
-    bg                : #0f0077,
-    links             : #fff
-  ),
-
-  nav-header          : ( //----- nav-header colors
-    trigger-bc        : $brand-primary,
-    trigger-c         : #fff,
-    links             : #fff,
-    hover-c           : #ef7298,
-    hover-bc          : #262628
+  footer               : ( //----- footer colors
+    bg                 : #0f0077,
+    links              : #fff
   ),
 
-  bg-mask             : ( //----- bacground-mask colors
-    background        : #33343f
-  ),
-  bg-sections         : ( //----- background sections colors
-    primary           : $brand-secondary
-  ),
-
-  b-hero              : ( //----- hero block colors
-    intro             : #fff
-  ),
-  b-related           : ( //----- related block colors
-    title             : $brand-primary,
-    btn-prim          : #1600ab,
-    btn-sec           : #fff
-  ),
-  b-youtubers         : ( //----- Youtubers block colors
-    bg-start          : #da2724,
-    bg-end            : #cb1e20,
-    item-title        : #fff,
-    title-colorized   : #fff
-  ),
-  b-download          : ( //----- Download block colors
-    c                 : #3a3d74
+  nav-header           : ( //----- nav-header colors
+    trigger-bc         : $brand-primary,
+    trigger-c          : #fff,
+    links              : #fff,
+    hover-c            : #ef7298,
+    hover-bc           : #262628
   ),
 
-  c-newsletter        : ( //----- c-newsletter colors
-    news-footer-bg    : #0d1f87,
-    place-c           : #7781bc,
-    input-c           : #fff,
-    icon              : #fff
+  bg-mask              : ( //----- bacground-mask colors
+    background         : #33343f
   ),
-  c-search            : ( //----- c-search colors
-    bg                : transparent,
-    c                 : #fff,
-    c-desk            : $brand-primary,
-    mask              : #130098
-  ),
-  c-media             : ( //----- media object colors
-    date              : $brand-primary,
-    title             : #000,
-    intro             : #878787
-  ),
-  c-media--video      : ( //----- media object video colors
-    title             : #000
-  ),
-  c-program           : ( //----- program object colors
-    text              : #fff,
-    hover-mask        : #000
+  bg-sections          : ( //----- background sections colors
+    primary            : $brand-secondary
   ),
 
-  slider              : ( //----- slider, some global colors
-    arrows-prim       : #000,
-    arrows-sec        : #fff,
-    bg-items          : #e4e4e4
+  b-hero               : ( //----- hero block colors
+    intro              : #fff
+  ),
+  b-related            : ( //----- related block colors
+    title              : $brand-primary,
+    btn-prim           : #1600ab,
+    btn-sec            : #fff
+  ),
+  b-youtubers          : ( //----- Youtubers block colors
+    bg-start           : #da2724,
+    bg-end             : #cb1e20,
+    item-title         : #fff,
+    title-colorized    : #fff
+  ),
+  b-download           : ( //----- Download block colors
+    c                  : #3a3d74
   ),
 
-  partners            : ( //----- Partners, some global colors
-    bg                : #ffec70
+  c-newsletter         : ( //----- c-newsletter colors
+    news-footer-bg     : #0d1f87,
+    place-c            : #7781bc,
+    input-c            : #fff,
+    icon               : #fff
+  ),
+  c-search             : ( //----- c-search colors
+    bg                 : transparent,
+    c                  : #fff,
+    c-desk             : $brand-primary,
+    mask               : #130098
+  ),
+  c-dot                : ( //----- c-dot colors
+    bc-prim            : #000,
+    bc-sec             : #fff,
+  ),
+  c-media              : ( //----- media object colors
+    date               : $brand-primary,
+    title              : #000,
+    intro              : #878787
+  ),
+  c-media--video       : ( //----- media object video colors
+    title              : #000
+  ),
+  c-program            : ( //----- program object colors
+    text               : #fff,
+    hover-mask         : #000
   ),
 
-  buttons             : ( //----- Buttons colors
-    hover             : transparent,
-    video-prim        : #000,
-    video-sec         : #fff
+  slider               : ( //----- slider, some global colors
+    arrows-prim        : #000,
+    arrows-sec         : #fff,
+    bg-items           : #e4e4e4
   ),
-  link                : ( //----- links colors
-    default           : #000
+
+  partners             : ( //----- Partners, some global colors
+    bg                 : #ffec70
   ),
-  border              : ( //----- Border colors
-    primary           : brand-primary,
-    secondary         : brand-primary
+
+  buttons              : ( //----- Buttons colors
+    hover              : transparent,
+    video-prim         : #000,
+    video-sec          : #fff
   ),
-  error               : ( //----- Error colors
-    color             : #ff0000
+  link                 : ( //----- links colors
+    default            : #000
+  ),
+  border               : ( //----- Border colors
+    primary            : brand-primary,
+    secondary          : brand-primary
+  ),
+  error                : ( //----- Error colors
+    color              : #ff0000
   ),
 
   //----- Pages
   // hp
-  hp                  : ( //----- program category colors
-    viewer-text       : #fff,
-    viewer-btn-prim   : #00fffc,
-    viewer-btn-sec    : #ffec70,
-    viewer-btn-tert   : #ef7298,
+  hp                   : ( //----- program category colors
+    viewer-text        : #fff,
+    viewer-btn-prim    : #00fffc,
+    viewer-btn-sec     : #ffec70,
+    viewer-btn-tert    : #ef7298,
 
-    nws-bg            : $brand-primary,
-    nws-text          : #fff,
-    nws-input-bg      : #1644d6,
+    tag-prim-text-prim : #fff,
+    tag-prim-text-sec  : #000,
+    tag-prim-bc        : #f0f0f0,
+    tag-prim-item-bc   : #fff,
+    tag-prim-1-details : #00fffc,
+    tag-prim-1-bg      : #2066e6,
+    tag-prim-2-details : #338dfd,
+    tag-prim-3-details : #fff,
+    tag-prim-3-bg      : #57a2ff,
+    tag-prim-4-details : #57c2ff,
+    tag-btn-prim       : #fff,
+    tag-btn-sec        : #363b75,
 
-    partners-title    : #626262,
-    partners-btn-prim : #fff,
-    partners-btn-sec  : #000
+    tag-sec-text       : #fff,
+    tag-sec-details    : #ffec70,
+    tag-sec-btn        : #000,
+
+    tag-ter-text       : #fff,
+
+    nws-bg             : $brand-primary,
+    nws-text           : #fff,
+    nws-input-bg       : #1644d6,
+
+    partners-title     : #626262,
+    partners-btn-prim  : #fff,
+    partners-btn-sec   : #000
   ),
   // Program
-  program-category    : ( //----- program category colors
-    text              : #000,
-    text-modified     : #fff
+  program-category     : ( //----- program category colors
+    text               : #000,
+    text-modified      : #fff
   )
 );
 
 // //----- Variables used in the @for loop for different brand colors
 // // Example... Socials
-// $buttonsArray      : facebook, fb-messenger, twitter, youtube, viber, whatsapp;
-// $buttonsLength     : length($buttonsArray) + 1;
+// $buttonsArray       : facebook, fb-messenger, twitter, youtube, viber, whatsapp;
+// $buttonsLength      : length($buttonsArray) + 1;
 // // In scss file
 // .c-btn {
 // @for $soc from 1 to $buttonsLength {
-// $currentButton     : nth($buttonsArray, $soc);
+// $currentButton      : nth($buttonsArray, $soc);
 // &--#{$currentButton} { // color
-// color              : colorFunc(socials, $currentButton);
+// color               : colorFunc(socials, $currentButton);
 // }
 // }
 // }

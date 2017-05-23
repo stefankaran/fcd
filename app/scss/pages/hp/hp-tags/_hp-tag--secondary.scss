@@ -1,0 +1,141 @@
+//----- HP Tag Secondary -- "Cohesion Social"
+.hp-tag--secondary {
+  position: relative;
+  background-color: colorFunc(tag, secondary);
+  color: colorFunc(hp, tag-sec-text);
+
+  &__body {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    @extend .c-line;
+    @include breakpoint(phone) {
+      padding: 9rem 9.7% 1rem;
+    }
+    @include breakpoint(tablet) {
+      padding: 7.5rem 0 4.5rem 5.5rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 10rem 0 6.5rem 7.5rem;
+    }
+  }
+
+  &__head {
+    margin-bottom: 8rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 4.2rem;
+    }
+    @include breakpoint(desktop) {
+      max-width: 55%;
+      margin-bottom: 5.5rem;
+    }
+  }
+  &__title {
+    position: relative;
+    font-family: $font-family-primary;
+    @include font-size(71px, 34px, 70px);
+    text-transform: uppercase;
+    color: colorFunc(hp, tag-sec-details);
+    margin-bottom: 1.7rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 2.1rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__intro {
+    @include font-size(27px, 25px, 40px);
+    @include line-height(28px, 25px, 50px);
+  }
+
+  &__items {}
+  &__item {
+    overflow: hidden;
+    @include breakpoint(phone) {
+      margin-bottom: 9rem;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 3.5rem;
+    }
+    @include breakpoint(desktop) {
+      float: left;
+      width: 46.6%;
+    }
+    &:first-child {
+      @include breakpoint(desktop) {
+        margin-right: 6.8%;
+      }
+    }
+    &__title {
+      @include font-size(36px, 30px, 50px);
+      margin-bottom: 3rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 1.2rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 2rem;
+      }
+      a {
+        color: colorFunc(hp, tag-sec-text);
+      }
+    }
+    &__media {
+      @include breakpoint(phone) {
+        margin-bottom: 3rem;
+      }
+      @include breakpoint(tablet) {
+        // float: left;
+        display: table-cell;
+        vertical-align: top;
+        width: 51%;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__img {}
+    &__content {
+      position: relative;
+      @include breakpoint(tablet) {
+        // float: left;
+        display: table-cell;
+        vertical-align: top;
+        width: 42.3%;
+        padding-left: 2rem;
+      }
+    }
+    &__intro {
+      @include font-size(18px, 20px, 35px);
+      @include line-height(21px, 20px, 45px);
+      margin-bottom: 7rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 4rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 1.3rem;
+      }
+      a {
+        color: colorFunc(hp, tag-sec-text);
+      }
+    }
+    &__btn {
+      display: inline-block;
+      color: colorFunc(hp, tag-sec-btn);
+      background-color: colorFunc(hp, tag-sec-details);
+      @include breakpoint(tablet) {
+        position: absolute;
+        left: 2rem;
+        bottom: 0;
+      }
+
+      &:hover {
+        color: colorFunc(hp, tag-sec-details);
+        border-color: colorFunc(hp, tag-sec-details);
+      }
+    }
+  }
+  .c-dot__circle {
+    background: colorFunc(hp, tag-sec-details);
+  }
+}

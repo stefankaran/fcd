@@ -1,6 +1,7 @@
 //----- Youtubers Block
 // Pages: Je'm oriente, Video single
 .b-youtubers {
+  overflow: hidden;
   // background-color: colorFunc(b-youtubers, bg-end);
   background: colorFunc(b-youtubers, bg-start); /* Old browsers */
   background: -moz-linear-gradient(top, colorFunc(b-youtubers, bg-start) 0%, colorFunc(b-youtubers, bg-end) 100%); /* FF3.6-15 */

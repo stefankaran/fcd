@@ -1,6 +1,7 @@
 //----- HP Viewer Block
 .hp-viewer {
   position: relative;
+  overflow: hidden;
 
   &__top {
     position: relative;

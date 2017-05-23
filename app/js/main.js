@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  sliderPhone('.hp-tag--tertiary__slider', 1);
+
   sliderPhone('.b-related__slider', 2);
   sliderPhone('.program-category__slider', 2);
   programCount();
@@ -147,30 +149,42 @@ $(document).ready(function() {
       // Header heigh
       var headerHeight = $('.b-header__top').height();
 
-      // Add smooth scrolling to all links
-      $(element).on('click', function(event) {
+      $(element).on('click', function(event){
+          event.preventDefault();
 
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
-
-              // Store hash
-              var hash = this.hash;
-
-              // Using jQuery's animate() method to add smooth page scroll
-              // Minus Header Height - Because header position is fixed - ONLY ON DESKTOP
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                  scrollTop: ($(window).width() >= 1023 ? $(hash).offset().top - headerHeight + 1 : $(hash).offset().top + 1)
-              }, 750, function(){
-
-                  // Add hash (#) to URL when done scrolling (default click behavior)
-                  window.location.hash = hash;
-              });
-
-          } // End if
+          $('html, body').animate({
+              scrollTop: ($(window).width() >= 1023 ? $( $.attr(this, 'href') ).offset().top - headerHeight + 1 : $( $.attr(this, 'href') ).offset().top + 1)
+          }, 750);
       });
+
+    //   // Header heigh
+    //   var headerHeight = $('.b-header__top').height();
+    //
+    //   // Add smooth scrolling to all links
+    //   $(element).on('click', function(event) {
+    //
+    //       // Make sure this.hash has a value before overriding default behavior
+    //       if (this.hash !== "") {
+    //           // Prevent default anchor click behavior
+    //           event.preventDefault();
+    //
+    //           // Store hash
+    //           var hash = this.hash;
+    //
+    //           // Using jQuery's animate() method to add smooth page scroll
+    //           // Minus Header Height - Because header position is fixed - ONLY ON DESKTOP
+    //           // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    //           $('html, body').animate({
+    //             //   scrollTop: ($(window).width() >= 1023 ? $(hash).offset().top - headerHeight + 1 : $(hash).offset().top + 1)
+    //               scrollTop: $(hash).offset().top - 100
+    //           }, 750, function(){
+    //
+    //               // Add hash (#) to URL when done scrolling (default click behavior)
+    //               window.location.hash = hash;
+    //           });
+    //
+    //       } // End if
+    //   });
 
   }
 

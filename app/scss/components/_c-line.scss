@@ -1,0 +1,17 @@
+//----- c-line / Line on HP blocks
+.c-line {
+  &:after {
+    @include breakpoint(overPhone) {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background-color: transparentize(colorFunc(c-dot, bc-prim), .9);
+    }
+    @include breakpoint(desktop) {
+      left: -1rem;
+    }
+  }
+}
