@@ -111,6 +111,7 @@
     }
   }
   &__item {
+    outline: none;
 
     &--big {
       @include breakpoint(phone) {
