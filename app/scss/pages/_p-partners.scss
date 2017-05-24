@@ -1,0 +1,123 @@
+//----- Page / Partners
+.p-partners {
+
+  &__head {
+    text-align: center;
+    background-color: colorFunc(partners, bg);
+    padding: 8.5rem 0 9.3rem;
+    @include breakpoint(tablet) {
+      padding: 10.4rem 0;
+    }
+    @include breakpoint(desktop) {
+      padding: 11rem 0 10.5rem;
+    }
+  }
+  &__title {}
+
+  &__category {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    @include breakpoint(tablet) {
+      padding-top: 8rem;
+      padding-bottom: 3rem;
+    }
+    @include breakpoint(desktop) {
+      padding-top: 7rem;
+      padding-bottom: 3rem;
+    }
+
+    &:nth-of-type(even) {
+      background-color: colorFunc(bg-sections, primary);
+    }
+
+    &__body {
+      @include breakpoint(tablet) {
+        padding: 0 8.5%;
+      }
+      @include breakpoint(desktop) {
+        padding: 0 6.2%;
+      }
+    }
+
+    &__list {
+      overflow: hidden;
+    }
+    &__title {
+      @include font-size(50px, 34px, 40px);
+      @include line-height(50px, 34px, 30px);
+      font-weight: $font-weight-bold;
+      position: relative;
+      z-index: z(min);
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 7.8rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 4.5rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 7.1rem;
+      }
+      @include breakpoint(toDesktop) { // like on design ?!
+        margin-right: 8%;
+        margin-left: 8%;
+      }
+
+      &:after,
+      &:before {
+        content: '';
+        @include absolute(center-vertical);
+        width: 4rem;
+        height: .2rem;
+        background-color: colorFunc(partners, h-line);
+        z-index: z(min) - 2;
+      }
+      &:after {
+        left: -5.5rem;
+      }
+      &:before {
+        right: -5.5rem;
+      }
+
+    }
+    &__item {
+      position: relative;
+      overflow: hidden;
+      width: 40%;
+      height: 17.3rem;
+      float: left;
+      background-color: colorFunc(partners, logo-bg);
+      margin-bottom: 8rem;
+      @include breakpoint(tablet) {
+        height: 15rem;
+        margin-bottom: 5rem;
+      }
+      @include breakpoint(desktop) {
+        height: 10.3rem;
+        width: 14.4%;
+        margin-right: 7%;
+        margin-bottom: 4rem;
+      }
+      // Every odd article on Mob and Tab
+      &:nth-of-type(odd) {
+        @include breakpoint(toDesktop) {
+          margin-right: 20%;
+        }
+      }
+      // Every 5th article on Desk
+      &:nth-of-type(5n) {
+        @include breakpoint(desktop) {
+          margin-right: 0;
+        }
+      }
+    }
+    &__logo {
+      height: 100%;
+    }
+    &__img {
+      @include absolute(center);
+      margin: 0 auto;
+      max-width: 80%;
+    }
+  }
+}
