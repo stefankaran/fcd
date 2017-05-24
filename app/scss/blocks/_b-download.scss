@@ -10,6 +10,7 @@
   }
 
   &__items {
+    overflow: hidden;
     @include breakpoint(tablet) {
       padding: 0 12%;
     }

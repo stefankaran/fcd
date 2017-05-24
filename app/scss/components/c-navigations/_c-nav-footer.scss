@@ -29,10 +29,10 @@
     @include breakpoint(phone) {
       margin-bottom: 5.1rem;
     }
-  }
-  &__link {
-    font-family: $font-family-tertiary;
-    @include font-size(15px, 20px, 30px);
-    color: colorFunc(footer, links);
+    a {
+      font-family: $font-family-tertiary;
+      @include font-size(15px, 20px, 30px);
+      color: colorFunc(footer, links);
+    }
   }
 }

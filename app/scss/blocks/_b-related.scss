@@ -54,4 +54,18 @@
       border-color: colorFunc(b-related, btn-prim);
     }
   }
+
+  .c-media {
+    @include breakpoint(overPhone) {
+      margin-bottom: 0;
+    }
+
+    &-list {
+      margin-bottom: 3rem;
+      @include breakpoint(desktop) {
+        margin-bottom: 3.9rem;
+      }
+    }
+  }
+
 }

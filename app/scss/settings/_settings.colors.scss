@@ -30,6 +30,10 @@ $colors                : (
     links              : #fff
   ),
 
+  h1                   : ( //----- h1 colors
+    primary            : $brand-primary
+  ),
+
   nav-header           : ( //----- nav-header colors
     trigger-bc         : $brand-primary,
     trigger-c          : #fff,

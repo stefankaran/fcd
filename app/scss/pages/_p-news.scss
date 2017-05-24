@@ -1,0 +1,43 @@
+//----- Page / News, Livenews, SHP
+.p-news {
+  background-color: colorFunc(bg-sections, primary);
+
+  &__body {
+    padding-top: 9rem;
+    margin-bottom: 10rem;
+    @include breakpoint(tablet) {
+      padding-top: 10.5rem;
+      margin-bottom: 5rem;
+    }
+    @include breakpoint(desktop) {
+      padding-top: 11rem;
+      margin-bottom: 9rem;
+    }
+  }
+  &__title {
+    text-align: center;
+    color: colorFunc(h1, primary);
+    margin-bottom: 8.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 7.5rem;
+    }
+  }
+
+  .c-media {
+
+    &:nth-of-type(2n+1) {
+      @include breakpoint(phone) {
+        clear: both;
+      }
+    }
+    &:nth-of-type(4n+1) {
+      @include breakpoint(overPhone) {
+        clear: both;
+      }
+    }
+  }
+
+}

@@ -9,16 +9,14 @@
   cursor: pointer;
   @include breakpoint(overPhone) {
     width: percentage(1/4);
-    margin-bottom: 0;
+  }
+  @include breakpoint(desktop) {
+    margin-bottom: 4.5rem;
   }
 
   // Wrap around c-media items
   &-list {
     overflow: hidden;
-    margin-bottom: 3rem;
-    @include breakpoint(desktop) {
-      margin-bottom: 3.9rem;
-    }
   }
 
   &__media {
@@ -64,7 +62,10 @@
     font-family: $font-family-tertiary;
     @include font-size(12px, 12px, 12px);
     @include line-height(17px, 17px, 17px);
-    color: colorFunc(c-media, intro);
     @include invisible(toDesktop);
+    color: colorFunc(c-media, intro);
+    a {
+      color: colorFunc(c-media, intro);
+    }
   }
 }
