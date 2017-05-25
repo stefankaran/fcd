@@ -118,6 +118,15 @@
       @include absolute(center);
       margin: 0 auto;
       max-width: 80%;
+      @include breakpoint(phone) {
+        max-height: 16.3rem; // equal to logo height - 1rem
+      }
+      @include breakpoint(tablet) {
+        max-height: 14rem; // equal to logo height - 1rem
+      }
+      @include breakpoint(desktop) {
+        max-height: 9.3rem; // equal to logo height - 1rem
+      }
     }
   }
 }

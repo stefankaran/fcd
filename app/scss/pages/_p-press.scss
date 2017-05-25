@@ -1,0 +1,183 @@
+//----- Page / Press
+.p-press {
+  background-color: colorFunc(bg-sections, primary);
+
+  &__body {
+    overflow: hidden;
+    padding-top: 10rem;
+    margin-bottom: 7rem;
+    @include breakpoint(tablet) {
+      padding-top: 10.5rem;
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 13rem 6.2% 0;
+      margin-bottom: 9rem;
+    }
+  }
+  &__title {
+    text-align: center;
+    color: colorFunc(h1, primary);
+    margin-bottom: 7.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 12.5rem;
+    }
+  }
+
+  &__list {
+    overflow: hidden;
+  }
+
+  &__item {
+    float: left;
+    margin-bottom: 7rem;
+    @include breakpoint(phone) {
+      width: 40%;
+      margin-bottom: 4.5rem;
+    }
+    @include breakpoint(tablet) {
+      width: 41.5%;
+    }
+    @include breakpoint(desktop) {
+      width: 29%;
+      margin-right: 6.5%;
+      margin-bottom: 8.5rem;
+    }
+
+    // Every odd article on Mob and Tab
+    &:nth-of-type(odd) {
+      @include breakpoint(phone) {
+        margin-right: 20%;
+      }
+      @include breakpoint(tablet) {
+        margin-right: 17%;
+      }
+    }
+    // Every 3th article on Desk
+    &:nth-of-type(3n) {
+      @include breakpoint(desktop) {
+        margin-right: 0;
+      }
+    }
+    // Every 1st article in row, except 1st row
+    &:nth-of-type(3n+1) {
+      @include breakpoint(desktop) {
+        clear: both;
+      }
+    }
+    &:nth-of-type(2n+1) {
+      @include breakpoint(toDesktop) {
+        clear: both;
+      }
+    }
+
+    &__logo {
+      position: relative;
+      background-color: colorFunc(press, logo-bg);
+      height: 17rem;
+      margin-bottom: 3rem;
+      @include breakpoint(tablet) {
+        height: 18.7rem;
+        margin-bottom: 2.4rem;
+      }
+      @include breakpoint(desktop) {
+        height: 20.4rem;
+        margin-bottom: 2.7rem;
+      }
+    }
+    &__img {
+      @include absolute(center);
+      margin: 0 auto;
+      max-width: 90%;
+      @include breakpoint(phone) {
+        max-height: 16rem; // equal to logo height - 1rem
+      }
+      @include breakpoint(tablet) {
+        max-height: 17.7rem; // equal to logo height - 1rem
+      }
+      @include breakpoint(desktop) {
+        max-height: 19.4rem; // equal to logo height - 1rem
+      }
+    }
+
+    &__content {
+      position: relative;
+      @include breakpoint(phone) {
+        padding: 0 2% 0 8%;
+      }
+      @include breakpoint(tablet) {
+        padding: 0 4%;
+      }
+      @include breakpoint(desktop) {
+        padding: 0 2%;
+      }
+    }
+    &__title {
+      @include font-size(18px, 18px, 28px);
+      font-weight: $font-weight-bold;
+      color: colorFunc(press, title);
+      margin-bottom: .5rem;
+      @include breakpoint(overPhone) {
+        margin-bottom: 1rem;
+      }
+      @include breakpoint(overPhone) {
+        width: 80%;
+        display: inline-block;
+      }
+    }
+    &__date {
+      font-family: $font-family-quinary;
+      @include font-size(18px, 18px, 25px);
+      margin-bottom: 2.5rem;
+      @include breakpoint(overPhone) {
+        width: 80%;
+        display: inline-block;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__download {
+      display: inline-block;
+      @include breakpoint(phone) {
+        margin-left: -8%;
+        margin-bottom: 2rem;
+      }
+      @include breakpoint(overPhone) {
+        position: absolute;
+      }
+      @include breakpoint(tablet) {
+        top: -0.2rem;
+        right: 1.2rem;
+      }
+      @include breakpoint(desktop) {
+        top: 0.2rem;
+        right: 0.2rem;
+      }
+
+      &__icon {
+        display: block;
+        background: url('#{$imgBaseUrl}/icon--pdf.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        @include breakpoint(phone) {
+          background-size: 7rem;
+          width: 7rem;
+          height: 7rem;
+        }
+        @include breakpoint(overPhone) {
+          background-size: 4.5rem;
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+      }
+    }
+    &__intro {
+      @include font-size(30px, 20px, 28px);
+      @include line-height(23px, 26px, 36px);
+    }
+  }
+}
