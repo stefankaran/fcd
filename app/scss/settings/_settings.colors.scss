@@ -17,7 +17,10 @@ $colors                : (
   tag                  : ( //----- tag colors
     primary            : #2a69dc,
     secondary          : #ef7298,
-    tertiary           : #262628
+    tertiary           : #262628,
+
+    primary-h1         : #00fffc,
+    secondary-h1       : #ffec70
   ),
 
   header               : ( //----- header colors
@@ -164,7 +167,7 @@ $colors                : (
     partners-btn-prim  : #fff,
     partners-btn-sec   : #000
   ),
-  // Program
+  // Program Category
   program-category     : ( //----- program category colors
     text               : #000,
     text-modified      : #fff

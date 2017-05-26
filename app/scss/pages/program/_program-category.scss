@@ -16,9 +16,8 @@
     }
   }
   &:nth-of-type(even) {
-    background-color: #2a69dc; //////
     .program-category__head {
-      color: colorFunc(program-category, text-modified); /////
+      color: colorFunc(program-category, text-modified);
     }
   }
   &:first-of-type {

@@ -1,2 +1,28 @@
 //----- Page / Program
-.p-program {}
+.p-program {
+
+  &--egalite {
+
+    .b-hero__title {
+      color: colorFunc(tag, primary-h1);
+    }
+    .program-category {
+
+      &:nth-of-type(even) {
+        background-color: colorFunc(tag, primary);
+      }
+    }
+  }
+  &--cohesion {
+
+    .b-hero__title {
+      color: colorFunc(tag, secondary-h1);
+    }
+    .program-category {
+
+      &:nth-of-type(even) {
+        background-color: colorFunc(tag, secondary);
+      }
+    }
+  }
+}
