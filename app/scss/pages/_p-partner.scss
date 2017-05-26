@@ -1,0 +1,27 @@
+//----- Page / Partner Single
+.p-partner {
+
+  &__content {
+    background-color: colorFunc(bg-sections, primary);
+    padding-top: 8.7rem;
+    padding-bottom: 1.2rem;
+    @include breakpoint(overPhone) {
+      padding-top: 7.7rem;
+      padding-bottom: 4.5rem;
+    }
+  }
+  &__logo {
+    margin: 0 auto;
+    max-width: 27rem;
+    margin-bottom: 8.1rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 7.1rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 6.3rem;
+    }
+  }
+  .b-related__title {
+    font-weight: $font-weight-bold;
+  }
+}

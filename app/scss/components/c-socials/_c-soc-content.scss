@@ -1,2 +1,47 @@
 //----- Socials / style only for socials in content
-.c-soc-content {}
+.c-soc-content {
+  color: colorFunc(c-social, primary);
+  z-index: z(min) + 1;
+  @include breakpoint(phone) {
+    display: none;
+    text-align: center;
+    position: fixed;
+    right: 3rem;
+    bottom: 5rem;
+  }
+
+  &__item {
+    display: block;
+    @include font-size(30px, 26px, 55px);
+    @include vendor-prefixes(transition, all 1s);
+    @include breakpoint(phone) {
+      margin-bottom: 6.3rem;
+      visibility: hidden;
+      opacity: 0;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 3.7rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__trigger {
+    @include hide(overPhone);
+    font-size: 6.5rem;
+    margin-top: 3rem;
+  }
+
+  // Show social items
+  &.active {
+    .c-soc-content__item {
+      @include breakpoint(phone) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

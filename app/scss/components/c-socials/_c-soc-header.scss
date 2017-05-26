@@ -11,9 +11,9 @@
 
   &__item {
     @include font-size(20px, 30px, 60px);
-    color: colorFunc(c-search, c);
+    color: colorFunc(c-social, secondary);
     @include breakpoint(desktop) {
-      color: colorFunc(c-search, c-desk);
+      color: colorFunc(c-social, primary);
     }
     margin-right: 20.5%;
     &:last-of-type {

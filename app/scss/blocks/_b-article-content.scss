@@ -1,0 +1,52 @@
+//----- Article Content Block
+// Pages: Article, Fondation, Program, Partner Single, Video Single, Static
+.b-article {
+  position: relative;
+
+  &__title {
+    text-align: center;
+    color: colorFunc(h1, primary);
+    margin-bottom: 2rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 3.8rem;
+    }
+  }
+  &__social {
+    @include breakpoint(overPhone) {
+      float: left;
+    }
+    @include breakpoint(tablet) {
+      width: cp(109px, 659px);
+      padding-top: 1rem;
+      padding-left: 3rem;
+    }
+    @include breakpoint(desktop) {
+      width: cp(150px, 1050px);
+      padding-top: 1rem;
+      padding-left: 3rem;
+    }
+  }
+  &__content {
+    @include breakpoint(overPhone) {
+      float: right;
+    }
+    @include breakpoint(tablet) {
+      width: cp(550px, 659px);
+    }
+    @include breakpoint(desktop) {
+      width: cp(900px, 1050px);
+    }
+
+    p {
+      @include font-size(20px, 23px, 38px);
+      @include line-height(38px, 38px, 68px);
+      margin-bottom: 6.8rem;
+      @include breakpoint(overPhone) {
+        margin-bottom: 3.8rem;
+      }
+    }
+  }
+}

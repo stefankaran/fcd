@@ -23,6 +23,36 @@
     @include breakpoint(desktop) {
       max-width: $site-desk-design;
     }
+
+    &--article {
+      @extend .l;
+      @include breakpoint(desktop) { // 1200px / Require parent l-d
+        padding-left: cp(150px, 1200px); // l-d == 1200px
+        padding-right: cp(150px, 1200px); // l-d == 1200px
+      }
+      @include breakpoint(tablet) { // 550px / Require empty parent for tablet l-t
+        padding-left: cp(109px, $site-tab-design);
+        padding-right: cp(109px, $site-tab-design);
+      }
+      &--withSticky {
+        @extend .l;
+        @include breakpoint(desktop) { // 1200px / Require parent l-d
+          padding-right: cp(150px, 1200px); // l-d == 1200px
+        }
+        @include breakpoint(tablet) { // 550px / Require empty parent for tablet l-t
+          padding-right: cp(109px, $site-tab-design);
+        }
+      }
+    }
+    // Example
+    // <!-- Wrapper -->
+    // <div class="l-content">
+    //   <div class="l-d l-p">
+    //     <div class="l-content--article">
+    //
+    //     </div>
+    //   </div>
+    // </div>
   }
 
   // Desktop
