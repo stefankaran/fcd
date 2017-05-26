@@ -3,6 +3,10 @@
 .b-hero  {
   position: relative;
 
+  &__body {
+    position: relative;
+  }
+
   &__media {}
   &__image {
     width: 100%;
@@ -12,17 +16,30 @@
     text-align: center;
 
     &-wrap {
-      position: absolute;
-      left: 0;
       width: 100%;
-      @include breakpoint(phone) {
-        @include absolute(center);
+
+      &--overPhone {
+        position: absolute;
+        left: 0;
+        @include breakpoint(phone) {
+          @include absolute(center);
+        }
+        @include breakpoint(tablet) {
+          top: 6.5rem;
+        }
+        @include breakpoint(desktop) {
+          top: 34.4%;
+        }
+
+        .b-hero__intro {
+          @include invisible(phone);
+        }
       }
-      @include breakpoint(tablet) {
-        top: 6.5rem;
-      }
-      @include breakpoint(desktop) {
-        top: 34.4%;
+      &--phone {
+        display: inline-block;
+        background-color: colorFunc(bg-sections, primary);
+        @include invisible(overPhone);
+        padding-top: 1rem;
       }
 
       &.b-hero__content-wrap--center {
@@ -34,12 +51,17 @@
   }
   &__title {}
   &__intro {
-    @include invisible(phone);
-    @include font-size(24px, 22px, 22px);
-    @include line-height(31px, 31px, 31px);
-    color: colorFunc(b-hero, intro);
+    @include font-size(24px, 22px, 40px);
+    @include line-height(31px, 31px, 67px);
     letter-spacing: -.5px;
     margin-top: 1.1rem;
+    @include breakpoint(phone) {
+      font-weight: $font-weight-bold;
+      color: colorFunc(b-hero, intro-mob);
+    }
+    @include breakpoint(overPhone) {
+      color: colorFunc(b-hero, intro);
+    }
     @include breakpoint(tablet) {
       padding: 0 5%;
     }
