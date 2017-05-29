@@ -18,21 +18,25 @@
     &-wrap {
       width: 100%;
 
-      &--overPhone {
-        position: absolute;
-        left: 0;
-        @include breakpoint(phone) {
-          @include absolute(center);
-        }
-        @include breakpoint(tablet) {
-          top: 6.5rem;
-        }
-        @include breakpoint(desktop) {
-          top: 34.4%;
-        }
+      &--center {
+        @include absolute(center);
 
-        .b-hero__intro {
-          @include invisible(phone);
+        &--modified {
+          position: absolute;
+          left: 0;
+          @include breakpoint(phone) {
+            @include absolute(center);
+          }
+          @include breakpoint(tablet) {
+            top: 6.5rem;
+          }
+          @include breakpoint(desktop) {
+            top: 34.4%;
+          }
+
+          .b-hero__intro {
+            @include invisible(phone);
+          }
         }
       }
       &--phone {
