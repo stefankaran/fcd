@@ -1,0 +1,183 @@
+//----- Page / Fondation
+.p-fondation {
+
+  &__section-title {
+    @include font-size(50px, 34px, 50px);
+    @include line-height(48px, 34px, 40px);
+  }
+
+  &__mission {
+    background-color: colorFunc(bg-sections, primary);
+    padding: 4.5rem 0 .8rem;
+    @include breakpoint(tablet) {
+      padding-bottom: 3.2rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 7.7rem 0 0;
+    }
+
+    &__title {
+      margin-bottom: 4.5rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
+  &__founder {
+    background-color: colorFunc(fondation, founder-bc);
+    color: colorFunc(fondation, founder-c);
+    text-align: center;
+    padding: 9.8rem 0 8rem;
+    @include breakpoint(tablet) {
+      padding: 5.8rem 0 6.5rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 11.5rem 0 12rem;
+    }
+
+    &__title {
+      margin-bottom: 2.5rem;
+      @include breakpoint(overPhone) {
+        margin-bottom: 3.4rem;
+      }
+    }
+    &__text {
+      @include font-size(20px, 23px, 38px);
+      @include line-height(25px, 38px, 68px);
+    }
+  }
+  &__culture {
+    text-align: center;
+    background-color: colorFunc(fondation, culture-bc);
+    color: colorFunc(fondation, culture-c);
+    padding: 7.7rem 0 8rem;
+    @include breakpoint(desktop) {
+      padding: 5.5rem 0 12rem;
+    }
+
+    &__title {
+      margin-bottom: 4.5rem;
+      @include breakpoint(desktop) {
+        margin-bottom: 2.2rem;
+      }
+    }
+    &__media {
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  &__equality {
+    text-align: center;
+    color: colorFunc(fondation, equality-c);
+    padding: 8rem 0 2rem;
+    @include breakpoint(tablet) {
+      padding-bottom: 1.5rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 7.5rem 0 6rem;
+    }
+
+    &__title {
+      margin-bottom: 4.5rem;
+      @include breakpoint(desktop) {
+        margin-bottom: 4rem;
+      }
+    }
+    &__media {
+      margin-bottom: 8rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 5rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 6.6rem;
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+    .b-download__item {
+      @include breakpoint(desktop) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  &__committee {
+    background-color: colorFunc(bg-sections, primary);
+    padding: 8rem 0 5.5rem;
+    @include breakpoint(tablet) {
+      padding: 7.7rem 0 4.5rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 7.3rem 0 5rem;
+    }
+
+    &__title {
+      margin-bottom: 7rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 4rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 3.5rem;
+      }
+    }
+    &__block {
+      overflow: hidden;
+      margin-bottom: 14rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 7rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 4rem;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+    }
+    &__col {
+      @include breakpoint(desktop) {
+        width: 45%;
+        float: left;
+      }
+      &:nth-of-type(odd) {
+        @include breakpoint(desktop) {
+          margin-right: 5%;
+        }
+      }
+    }
+    &__text {
+      @include font-size(18px, 23px, 34px);
+      @include line-height(22px, 27px, 34px);
+      margin-bottom: 4rem;
+      @include breakpoint(tablet) {
+        margin-bottom: 3rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 2.1rem;
+      }
+
+      &__helper {
+        text-transform: uppercase;
+        color: colorFunc(fondation, committee-helper);
+        font-weight: $font-weight-bold;
+        position: relative;
+        &:before {
+          content: '';
+          width: .3rem;
+          height: .3rem;
+          background-color: colorFunc(fondation, committee-helper);
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: .4rem;
+        }
+      }
+    }
+  }
+
+  .b-hero__title {
+    color: colorFunc(fondation, hero-title);
+  }
+}

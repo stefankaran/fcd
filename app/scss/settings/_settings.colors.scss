@@ -173,9 +173,19 @@ $colors                : (
     text-modified      : #fff
   ),
   // Press
-  press                : ( //----- press item colors
+  press                : ( //----- press page colors
     title              : #130098,
     logo-bg            : #fff
+  ),
+  // Fondation
+  fondation            : ( //----- fondation page colors
+    hero-title         : #fff,
+    founder-c          : #fff,
+    founder-bc         : $brand-primary,
+    culture-c          : #fff,
+    culture-bc         : #262628,
+    equality-c         : $brand-primary,
+    committee-helper   : #222869
   )
 );
 
