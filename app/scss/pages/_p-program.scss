@@ -12,6 +12,24 @@
         background-color: colorFunc(tag, primary);
       }
     }
+
+    // Program single
+    .p-program-single__key {
+      background-color: colorFunc(tag, primary);
+      &:before,
+      &:after {
+        background-color: colorFunc(tag, primary);
+      }
+    }
+    .p-program-single__key__head {
+      color: colorFunc(tag, primary-h1);
+    }
+    .p-program-single__key__block {
+      strong {
+        color: colorFunc(tag, primary-h1);
+      }
+    }
+
   }
   &--cohesion {
 
@@ -22,6 +40,23 @@
 
       &:nth-of-type(even) {
         background-color: colorFunc(tag, secondary);
+      }
+    }
+
+    // Program single
+    .p-program-single__key {
+      background-color: colorFunc(tag, secondary);
+      &:before,
+      &:after {
+        background-color: colorFunc(tag, secondary);
+      }
+    }
+    .p-program-single__key__head {
+      color: colorFunc(tag, secondary-h1);
+    }
+    .p-program-single__key__block {
+      strong {
+        color: colorFunc(tag, secondary-h1);
       }
     }
   }

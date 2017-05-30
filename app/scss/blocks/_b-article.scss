@@ -49,4 +49,20 @@
       }
     }
   }
+  &__video {
+    margin-bottom: 6rem;
+    @include breakpoint(overPhone) {
+      margin-bottom: 4.25rem;
+    }
+
+    iframe {
+      margin: 0 auto;
+      display: block;
+      @include breakpoint(phone) {
+        width: 1px;
+        min-width: 100%;
+      }
+    }
+  }
+
 }

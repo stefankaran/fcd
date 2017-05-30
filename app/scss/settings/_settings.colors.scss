@@ -142,7 +142,7 @@ $colors                : (
 
     tag-prim-text-prim : #fff,
     tag-prim-text-sec  : #000,
-    tag-prim-bc        : #f0f0f0,
+    tag-prim-bc        : $brand-secondary,
     tag-prim-item-bc   : #fff,
     tag-prim-1-details : #00fffc,
     tag-prim-1-bg      : #2066e6,
@@ -171,6 +171,10 @@ $colors                : (
   program-category     : ( //----- program category colors
     text               : #000,
     text-modified      : #fff
+  ),
+  // Program Single
+  program-single     : ( //----- program single colors
+    key-text               : #fff
   ),
   // Press
   press                : ( //----- press page colors
