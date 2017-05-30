@@ -62,6 +62,10 @@
       }
     }
     &__media {
+      @extend .center-block;
+      @include breakpoint(desktop) {
+        max-width: 80%;
+      }
 
       img {
         margin: 0 auto;
@@ -86,12 +90,15 @@
       }
     }
     &__media {
+      @extend .center-block;
+      max-width: 80%;
       margin-bottom: 8rem;
       @include breakpoint(tablet) {
         margin-bottom: 5rem;
       }
       @include breakpoint(desktop) {
         margin-bottom: 6.6rem;
+        max-width: 50%;
       }
       img {
         margin: 0 auto;
