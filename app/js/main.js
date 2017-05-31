@@ -22,6 +22,8 @@ $(document).ready(function() {
 
   smoothScroll('.hp-viewer__btn');
 
+dropDownMenu();
+
   // sliderHero('.c-hero');
 
   //----- Trigger active class
@@ -216,5 +218,50 @@ $(document).ready(function() {
     //   });
 
   }
+
+
+function dropDownMenu() {
+
+    function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('.c-dd__selected');
+        this.opts = this.dd.find('.c-dd__menu > .c-dd__item');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+    }
+    DropDown.prototype = {
+        initEvents: function() {
+            var obj = this;
+
+            obj.dd.on('click', function(event) {
+                $(this).toggleClass('active');
+                return false;
+            });
+
+            obj.opts.on('click', function() {
+                var opt = $(this);
+                obj.val = opt.text();
+                obj.index = opt.index();
+                obj.placeholder.text(obj.val);
+            });
+        },
+        getValue: function() {
+            return this.val;
+        },
+        getIndex: function() {
+            return this.index;
+        }
+    }
+
+    // Init
+    var profession = new DropDown($('#profession'));
+    var school     = new DropDown($('#school'));
+    var domains    = new DropDown($('#domains'));
+
+}
+
+
+
 
 });

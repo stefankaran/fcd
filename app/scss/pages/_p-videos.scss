@@ -1,0 +1,167 @@
+//----- Page / Video Filter
+.p-videos {
+
+  &__top {
+    background-color: colorFunc(tag, tertiary);
+    color: colorFunc(videos, text);
+    @include breakpoint(phone) {
+      padding-top: 8.5rem;
+      padding-bottom: 10rem;
+    }
+    @include breakpoint(tablet) {
+      padding-top: 6.5rem;
+      padding-bottom: 8rem;
+    }
+    @include breakpoint(desktop) {
+      padding-top: 17rem;
+      padding-bottom: 14rem;
+    }
+
+    .c-rotated-text {
+      opacity: 1;
+      height: 100%;
+      width: 35rem;
+      left: -5.5rem;
+      @include breakpoint(tablet) {
+        left: -1.5rem;
+      }
+      @include breakpoint(desktop) {
+        width: 45rem;
+        left: 3.5rem;
+      }
+    }
+  }
+
+  &__head {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7.5rem;
+    @include breakpoint(tablet) {
+      max-width: 92%;
+    }
+    @include breakpoint(desktop) {
+      max-width: 60%;
+      margin-bottom: 9rem;
+    }
+  }
+  &__title {
+    color: colorFunc(tag, secondary);
+    @include breakpoint(phone) {
+      margin-bottom: 5rem;
+    }
+    @include breakpoint(overPhone) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__intro {
+    @include font-size(24px, 22px, 40px);
+    @include line-height(31px, 31px, 67px);
+  }
+
+  &__filters {
+    display: inline-block;
+    width: 100%;
+    @include breakpoint(phone) {
+      padding: 0 10%;
+      margin-bottom: 2rem;
+    }
+    @include breakpoint(tablet) {
+      padding: 0 25%;
+      margin-bottom: 3rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 0 2.3%;
+    }
+  }
+  &__filter {
+    display: inline-block;
+    margin-bottom: 8rem;
+    @include breakpoint(toDesktop) {
+      width: 100%;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+    @include breakpoint(desktop) {
+      float: left;
+      width: 30%;
+      margin-right: 5%;
+      &:last-of-type {
+        margin-right: 0;
+        .c-dd {
+          margin-top: -.3rem;
+        }
+      }
+    }
+
+    &__title {
+      @include font-size(35px, 35px, 45px);
+      @include line-height(28px, 28px, 40px);
+
+      @include breakpoint(phone) {
+        padding-left: 4%;
+        margin-bottom: 3.5rem;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 2.5rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 5.3rem;
+      }
+
+      &--colorized {
+        color: colorFunc(tag, secondary);
+      }
+      &--below {
+        display: block;
+      }
+      &--yt {
+        font-family: $font-family-quaternary;
+        font-weight: $font-weight-bold;
+        &--colorized {
+          color: colorFunc(videos, yt);
+        }
+      }
+    }
+  }
+
+  &__results {
+    position: relative;
+
+    &__title {
+      font-family: $font-family-primary;
+      text-transform: uppercase;
+      @include font-size(60px, 36.6px, 42px);
+      @include line-height(57px, 34.75px, 37px);
+    }
+    &__media {
+      position: relative;
+      margin: 0 auto;
+      @include breakpoint(tablet) {
+        max-width: 83%;
+      }
+      @include breakpoint(desktop) {
+        max-width: 75%;
+      }
+    }
+    &__img {}
+    &__icon {
+      position: absolute;
+      right: 3%;
+      bottom: 6%;
+      @include font-size(85.5px, 60px, 70px);
+      color: colorFunc(tag, secondary);
+    }
+  }
+
+  .b-youtubers {
+    @include breakpoint(desktop) {
+      padding-bottom: 1.5rem;
+    }
+  }
+  .b-slider--video {
+    @include breakpoint(desktop) {
+      padding-bottom: 2.5rem;
+    }
+  }
+}

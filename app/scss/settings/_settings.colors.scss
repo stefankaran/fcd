@@ -57,7 +57,7 @@ $colors                : (
     intro-mob          : #000
   ),
   b-article            : ( //----- article content block colors
-    text-sec              : #fff
+    text-sec           : #fff
   ),
   b-related            : ( //----- related block colors
     title              : $brand-primary,
@@ -93,6 +93,10 @@ $colors                : (
   c-dot                : ( //----- c-dot colors
     bc-prim            : #000,
     bc-sec             : #fff,
+  ),
+  c-dd                 : ( //----- c-dd / DropDown menu colors
+    text               : #000,
+    bg                 : #fff,
   ),
   c-media              : ( //----- media object colors
     date               : $brand-primary,
@@ -176,8 +180,8 @@ $colors                : (
     text-modified      : #fff
   ),
   // Program Single
-  program-single     : ( //----- program single colors
-    key-text               : #fff
+  program-single       : ( //----- program single colors
+    key-text           : #fff
   ),
   // Press
   press                : ( //----- press page colors
@@ -195,9 +199,14 @@ $colors                : (
     committee-helper   : #222869
   ),
   // Article
-  article            : ( //----- article page colors
-    tag-line-prim         : #000,
-    tag-line-sec         : #fff
+  article              : ( //----- article page colors
+    tag-line-prim      : #000,
+    tag-line-sec       : #fff
+  ),
+  // Videos
+  videos               : ( //----- Videos page colors
+    text               : #fff,
+    yt                 : #cd201f
   )
 );
 

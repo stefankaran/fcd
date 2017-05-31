@@ -1,0 +1,81 @@
+//---- DropDown
+.c-dd {
+  font-family: $font-family-tertiary;
+  font-weight: $font-weight-bold;
+  @include font-size(16px, 16px, 25px);
+  background-color: colorFunc(c-dd, bg);
+  color: colorFunc(c-dd, text);
+  position: relative;
+  float: left;
+  @include breakpoint(phone) {
+    width: 100%;
+  }
+  @include breakpoint(tablet) {
+    width: 33rem;
+  }
+  @include breakpoint(desktop) {
+    width: 34.5rem;
+  }
+  &.active {
+    .c-dd__menu {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  &__row-style { // Style for selected and menu__item
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    width: 100%;
+    padding-right: 13%;
+    padding-left: 4.5%;
+    @include breakpoint(phone) {
+      height: 8rem;
+      line-height: 8rem;
+    }
+    @include breakpoint(overPhone) {
+      height: 4.5rem;
+      line-height: 4.5rem;
+    }
+  }
+  &__selected {
+    @extend .c-dd__row-style;
+    display: inline-block;
+  }
+  &__icon {
+    @include absolute(center-vertical);
+    right: 2rem;
+    color: colorFunc(tag, secondary);
+  }
+  &__menu {
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: colorFunc(c-dd, bg);
+    opacity: 0;
+    pointer-events: none;
+    z-index: z(min) + 1;
+    // max-height: 25rem;
+    // overflow-y: scroll;
+    // &::-webkit-scrollbar-thumb {
+    //   background-color: colorFunc(tag, secondary);
+    //   @include vendor-prefixes(border-radius, 2rem);
+    // }
+    // &::-webkit-scrollbar {
+    //   width: 1rem;
+    // }
+    // &::-webkit-scrollbar-track {
+    //   box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
+    // }
+  }
+  &__item {
+    @extend .c-dd__row-style;
+    margin-right: 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid colorFunc(tag, secondary);;
+  }
+}
