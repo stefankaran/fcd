@@ -20,17 +20,7 @@
         padding-top: 6.5rem;
       }
     }
-    &__content {
-
-    }
-    &__intro {
-      @include font-size(27px, 27px, 45px);
-      @include line-height(35px, 42px, 65px);
-      margin-bottom: 4rem;
-      @include breakpoint(desktop) {
-        margin-bottom: 3.5rem;
-      }
-    }
+    &__content {}
   }
 
 
@@ -122,6 +112,7 @@
       strong {
         @include font-size(40px, 38px, 60px);
         @include line-height(43px, 45px, 70px);
+        display: block;
       }
     }
   }

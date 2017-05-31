@@ -1,7 +1,7 @@
 //----- Socials / style only for socials in content
 .c-soc-content {
   color: colorFunc(c-social, primary);
-  z-index: z(min) + 1;
+  z-index: z(min) + 2;
   @include breakpoint(phone) {
     display: none;
     text-align: center;

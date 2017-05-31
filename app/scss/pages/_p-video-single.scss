@@ -1,0 +1,44 @@
+//----- Page / Video Single
+.p-video-single {
+
+  &__article {
+    background-color: colorFunc(tag, tertiary);
+    @include breakpoint(tablet) {
+      padding-top: 8rem;
+    }
+    @include breakpoint(desktop) {
+      padding-top: 5rem;
+    }
+  }
+  .c-video {
+    margin-bottom: 8rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 6rem;
+    }
+  }
+  .b-article__title {
+    color: colorFunc(tag, secondary);
+    margin-bottom: 5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 3.2rem;
+    }
+  }
+  .b-article__content {
+    color: colorFunc(b-article, text-sec);
+  }
+  .c-soc-content {
+    @include breakpoint(overPhone) {
+      color: colorFunc(b-article, text-sec);
+    }
+  }
+
+  .b-article__tags__item {
+    &:after {
+      background-color: colorFunc(article, tag-line-sec);
+    }
+  }
+  .b-article__tags__link {
+    color: colorFunc(tag, secondary);
+    border-bottom: 1px solid colorFunc(tag, secondary);
+  }
+}

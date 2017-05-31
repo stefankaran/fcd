@@ -14,6 +14,14 @@
       margin-bottom: 3.8rem;
     }
   }
+  &__intro {
+    @include font-size(27px, 27px, 45px);
+    @include line-height(35px, 42px, 65px);
+    margin-bottom: 4rem;
+    @include breakpoint(desktop) {
+      margin-bottom: 3.5rem;
+    }
+  }
   &__social {
     @include breakpoint(overPhone) {
       float: left;
@@ -70,5 +78,79 @@
       margin-top: 2rem;
     }
   }
+  &__tags {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 8rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 6.5rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 5.5rem;
+    }
 
+    &__label {
+      @include font-size(25px, 20px, 27px);
+      width: 20%;
+      float: left;
+      @include breakpoint(tablet) {
+        width: 17%;
+      }
+      @include breakpoint(desktop) {
+        width: 13%;
+      }
+    }
+    &__wrap {
+      width: 80%;
+      float: left;
+      margin-top: .5rem;
+      @include breakpoint(tablet) {
+        width: 83%;
+      }
+      @include breakpoint(desktop) {
+        width: 87%;
+      }
+    }
+    &__item {
+      font-family: $font-family-tertiary;
+      font-weight: $font-weight-bold;
+      @include font-size(15px, 15px, 22px);
+      position: relative;
+      float: left;
+      @include breakpoint(phone) {
+        margin-bottom: 1.5rem;
+        &:nth-child(2n+1) {
+          clear: both;
+        }
+        &:nth-child(odd) {
+          padding-right: 5rem;
+        }
+        &:nth-child(even) {
+          padding-left: 5rem;
+          &:after {
+            display: none;
+          }
+        }
+      }
+      @include breakpoint(overPhone) {
+        margin-bottom: 2rem;
+        padding: 0 1.5rem;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 1px;
+        height: 80%;
+      }
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
 }

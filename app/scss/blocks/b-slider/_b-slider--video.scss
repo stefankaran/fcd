@@ -13,6 +13,9 @@
   @include breakpoint(desktop) {
     padding: 7.1rem 0 0;
   }
+  &:last-child {
+    margin-bottom: 0;
+  }
   &:before {
     content: '+';
     font-family: $font-family-primary;

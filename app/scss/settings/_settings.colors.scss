@@ -56,6 +56,9 @@ $colors                : (
     intro              : #fff,
     intro-mob          : #000
   ),
+  b-article            : ( //----- article content block colors
+    text-sec              : #fff
+  ),
   b-related            : ( //----- related block colors
     title              : $brand-primary,
     btn-prim           : #1600ab,
@@ -190,6 +193,11 @@ $colors                : (
     culture-bc         : #262628,
     equality-c         : $brand-primary,
     committee-helper   : #222869
+  ),
+  // Article
+  article            : ( //----- article page colors
+    tag-line-prim         : #000,
+    tag-line-sec         : #fff
   )
 );
 
