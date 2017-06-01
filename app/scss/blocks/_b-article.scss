@@ -63,13 +63,24 @@
       margin-bottom: 4.25rem;
     }
     &--patchwork {
-      width: 49.5%;
       float: left;
+      @include breakpoint(phone) {
+        width: 49%;
+      }
+      @include breakpoint(overPhone) {
+        width: 49.75%;
+      }
       &:first-child {
-        margin-right: 1%;
+        @include breakpoint(phone) {
+          margin-right: 2%;
+        }
+        @include breakpoint(overPhone) {
+          margin-right: .5%;
+        }
       }
     }
     &__title {
+      font-family: $font-family-tertiary;
       font-weight: $font-weight-bold;
       @include font-size(14px, 17px, 27px);
       @include line-height(19px, 23px, 33px);

@@ -25,6 +25,7 @@
       color: colorFunc(tag, primary-h1);
     }
     .p-program-single__key__block {
+      border-color: colorFunc(program-single, key-border-egalite);
       strong {
         color: colorFunc(tag, primary-h1);
       }
@@ -55,6 +56,7 @@
       color: colorFunc(tag, secondary-h1);
     }
     .p-program-single__key__block {
+    border-color: colorFunc(program-single, key-border-cohesion);
       strong {
         color: colorFunc(tag, secondary-h1);
       }

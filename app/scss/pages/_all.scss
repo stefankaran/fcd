@@ -5,7 +5,6 @@
 @import "p-partner";
 @import "p-partners";
 @import "p-press";
-@import "p-program";
 @import "p-program-single";
 @import "p-fondation";
 @import "p-videos";
@@ -21,5 +20,6 @@
 @import "hp/hp-tags/hp-tag--tertiary";
 
 // Program
+@import "program/p-program";
 @import "program/program-category";
 @import "program/program-category--diff";
