@@ -1,7 +1,6 @@
 //---- DropDown
 .c-dd {
   font-family: $font-family-tertiary;
-  font-weight: $font-weight-bold;
   @include font-size(16px, 16px, 25px);
   background-color: colorFunc(c-dd, bg);
   color: colorFunc(c-dd, text);
@@ -21,6 +20,9 @@
       opacity: 1;
       pointer-events: auto;
     }
+    .c-dd__icon {
+      @include vendor-prefixes(transform, rotate(180deg) translateY(50%));
+    }
   }
   &__row-style { // Style for selected and menu__item
     white-space: nowrap;
@@ -30,6 +32,11 @@
     width: 100%;
     padding-right: 13%;
     padding-left: 4.5%;
+  }
+  &__selected {
+    @extend .c-dd__row-style;
+    font-weight: $font-weight-bold;
+    display: inline-block;
     @include breakpoint(phone) {
       height: 8rem;
       line-height: 8rem;
@@ -39,19 +46,17 @@
       line-height: 4.5rem;
     }
   }
-  &__selected {
-    @extend .c-dd__row-style;
-    display: inline-block;
-  }
   &__icon {
+    @include font-size(12px, 12px, 25px);
     @include absolute(center-vertical);
     right: 2rem;
     color: colorFunc(tag, secondary);
+    @include vendor-prefixes(transition, all .3s);
   }
   &__menu {
     overflow: hidden;
     position: absolute;
-    top: 100%;
+    top: 104%;
     left: 0;
     right: 0;
     background-color: colorFunc(c-dd, bg);
@@ -73,9 +78,22 @@
   }
   &__item {
     @extend .c-dd__row-style;
+    @include vendor-prefixes(transition, all .2s);
     margin-right: 0;
     width: 100%;
     position: relative;
-    border-top: 1px solid colorFunc(tag, secondary);;
+    @include breakpoint(phone) {
+      height: 7.2rem;
+      line-height: 7.2rem;
+    }
+    @include breakpoint(overPhone) {
+      height: 3.5rem;
+      line-height: 3.5rem;
+    }
+    &:hover {
+      @include vendor-prefixes(transform, skewX(-20deg));
+      color: colorFunc(tag, secondary);
+    }
+    // border-top: 1px solid colorFunc(tag, secondary);
   }
 }
