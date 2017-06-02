@@ -11,6 +11,12 @@ $(document).ready(function() {
     }
 
 
+    // article single
+    sliderProgramRelated();
+    sliderHero('.p-article__slider');
+    // article single End
+
+
   sliderPhone('.hp-tag--tertiary__slider', 1);
 
   sliderPhone('.b-related__slider', 2);
@@ -93,6 +99,62 @@ dropDownMenu();
       navStickyTrigger.fadeOut(750);
     }
   });
+
+
+  // // Program related slider / Slide length
+  // function sliderProgramRelatedSlides() {
+  //     var slider = $('.b-program-related__slider');
+  //     var sliderSlide = $('.b-program-related__slider__slide');
+  //
+  //     console.log(sliderSlide.length);
+  // }
+
+  //----- Program related slider
+  function sliderProgramRelated() {
+
+      var slider = $('.b-program-related__slider');
+      var sliderSlide = $('.b-program-related__slide');
+      var sliderSlideCount = sliderSlide.length;
+      var slickList = $('.b-program-related__slider .slick-list');
+      var slidesNum = ('slideNum-' + sliderSlideCount);
+
+      var desktop = 1023;
+      var tablet = 768;
+
+      var ww = $(window).width();
+
+      // Slick init
+      slider.slick({
+          responsive: [{
+              breakpoint: 99999,
+              settings: "unslick"
+          }, {
+              breakpoint: 1024,
+              settings: {
+                  infinite: false,
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  dots: false,
+                  arrows: false
+              }
+          }]
+      });
+
+      // Desktop layout
+      if (ww >= desktop && sliderSlideCount == 3) {
+          slider.addClass(slidesNum);
+      }
+
+      // Tablet layout
+      if (ww >= tablet && ww <= desktop) {
+          if (sliderSlideCount == 3) {
+              slider.addClass(slidesNum);
+          } else if (sliderSlideCount == 2) {
+              slider.addClass(slidesNum);
+          }
+      }
+
+  }
 
   //----- Init slider only on mobile
   function sliderPhone(sliderName, slideCount) {

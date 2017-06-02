@@ -1,0 +1,29 @@
+//----- Page / Article Single
+.p-article {
+
+  &__content {
+    background-color: colorFunc(bg-sections, primary);
+    padding: 4.7rem 0 0;
+    @include breakpoint(desktop) {
+      padding: 4.2rem 0;
+    }
+  }
+  .b-article__head {
+    margin-bottom: 6.5rem;
+  }
+
+  .b-article__tags {
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+  .b-article__tags__item {
+    &:after {
+      background-color: colorFunc(b-article, tag-line-prim);
+    }
+  }
+  .b-article__tags__link {
+    color: colorFunc(b-article, tag);
+    border-bottom: 1px solid colorFunc(b-article, tag);
+  }
+}

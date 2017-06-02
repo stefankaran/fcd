@@ -34,7 +34,7 @@
 
   .b-article__tags__item {
     &:after {
-      background-color: colorFunc(article, tag-line-sec);
+      background-color: colorFunc(b-article, tag-line-sec);
     }
   }
   .b-article__tags__link {

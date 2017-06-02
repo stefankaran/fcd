@@ -77,13 +77,13 @@
   .icon--arrow-slider {
     color: colorFunc(slider, arrows-sec);
     &.icon--arrow-left {
-      left: 2.5rem;
+      left: 2rem;
       @include breakpoint(desktop) {
         left: 12.5rem;
       }
     }
     &.icon--arrow-right {
-      right: 2.5rem;
+      right: 2rem;
       @include breakpoint(desktop) {
         right: 12.5rem;
       }

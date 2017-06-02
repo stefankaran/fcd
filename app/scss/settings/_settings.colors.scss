@@ -57,7 +57,10 @@ $colors                : (
     intro-mob          : #000
   ),
   b-article            : ( //----- article content block colors
-    text-sec           : #fff
+    text-sec           : #fff,
+    tag                : $brand-primary,
+    tag-line-prim      : #000,
+    tag-line-sec       : #fff
   ),
   b-related            : ( //----- related block colors
     title              : $brand-primary,
@@ -72,6 +75,12 @@ $colors                : (
   ),
   b-download           : ( //----- Download block colors
     c                  : #3a3d74
+  ),
+  // Program Related
+  program-related      : ( //----- program related colors
+    bg                 : $brand-primary,
+    bg-after           : #fff,
+    title              : #fff
   ),
 
   c-social             : ( //----- c-social colors
@@ -199,11 +208,6 @@ $colors                : (
     culture-bc         : #262628,
     equality-c         : $brand-primary,
     committee-helper   : #222869
-  ),
-  // Article
-  article              : ( //----- article page colors
-    tag-line-prim      : #000,
-    tag-line-sec       : #fff
   ),
   // Videos
   videos               : ( //----- Videos page colors

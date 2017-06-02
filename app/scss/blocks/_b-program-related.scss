@@ -1,0 +1,156 @@
+//----- Program Related Block
+// Pages: Article Single
+.b-program-related {
+  position: relative;
+  background-color: colorFunc(program-related, bg);
+  @include breakpoint(phone) {
+    margin-top: -4rem;
+    margin-bottom: -4.5rem;
+  }
+  @include breakpoint(tablet) {
+    margin-top: -3.2rem;
+    margin-bottom: -3rem;
+  }
+  @include breakpoint(desktop) {
+    margin-top: -4.2rem;
+    margin-bottom: -4rem;
+  }
+  &:before,
+  &:after {
+    content: '';
+    width: 100%;
+    background-color: colorFunc(program-related, bg-after);
+    display: inline-block;
+    position: absolute;
+    z-index: z(min);
+    @include breakpoint(tablet) {
+      height: 3.1rem;
+    }
+    @include breakpoint(desktop) {
+      height: 4.25rem;
+    }
+  }
+  &:before {
+    top: 0;
+    @include breakpoint(phone) {
+      height: 3.5rem;
+    }
+  }
+  &:after {
+    bottom: 0;
+    @include breakpoint(phone) {
+      height: 4.5rem;
+    }
+  }
+
+  &__title {
+    @include font-size(50px, 34px, 34px);
+    @include absolute(center);
+    text-align: center;
+    width: 100%;
+    color: colorFunc(program-related, title);
+    padding-right: 6%;
+    padding-bottom: 1rem;
+  }
+
+  &__slider {
+    position: relative;
+    overflow: hidden;
+    z-index: z(min) + 1;
+    @include breakpoint(desktop) {
+      padding: 0 cp(76px, 1200px); // === 1048
+    }
+
+    //----- Title + 2 programs (title is also slide)
+    &.slideNum-3 {
+
+      .b-program-related__slide {
+
+        // Only slide with title
+        &--withTitle {
+          @include breakpoint(desktop) {
+            width: cp(445px, 1048px); // Desktop width ==> title and 2 programs
+          }
+        }
+
+      }
+
+      .slick-list {
+        @include breakpoint(tablet) {
+          padding: 0 21.3%;
+        }
+      }
+    }
+
+    //----- Title + 1 program (title is also slide)
+    &.slideNum-2 {
+
+      // Every slide
+      .b-program-related__slide {
+        @include breakpoint(tablet) {
+          // Tablet width ==> title and only 1 program
+          width: cp(220px, 660px) !important; ///// Overide slick width
+        }
+
+        // Only slide with title
+        &--withTitle {
+          @include breakpoint(tablet) {
+            // Tablet width ==> title and only 1 program
+            width: cp(440px, 660px) !important; ///// Overide slick width
+          }
+        }
+
+      }
+
+    }
+
+    .slick-list {
+      @extend .l-t; // Wrap only for tablet
+      @include breakpoint(phone) {
+        padding: 0 9% 0 0;
+      }
+    }
+  }
+
+  // Every slide
+  &__slide {
+    position: relative;
+    outline: none;
+    float: left;
+    @include breakpoint(phone) {
+      margin-right: .1rem;
+    }
+    @include breakpoint(desktop) {
+      height: 46.3rem;
+      width: cp(300px, 1048px); // Desktop width ==> title and only 1 program
+      margin-right: cp(1.5px, 1048px);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    // Only slide with title
+    &--withTitle {
+      @include breakpoint(desktop) {
+        width: cp(745px, 1048px); // Desktop width ==> title and only 1 program
+      }
+    }
+
+    // Overide slick default height of 100% !
+    &.slick-slide {
+      @include breakpoint(phone) {
+        height: 48.3rem;
+      }
+      @include breakpoint(tablet) {
+        height: 34rem;
+      }
+    }
+  }
+  .c-program {
+    overflow: visible;
+    width: 100%;
+    @include breakpoint(tablet) {
+      margin-right: 0;
+    }
+  }
+}
