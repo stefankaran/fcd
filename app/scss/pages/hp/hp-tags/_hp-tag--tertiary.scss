@@ -9,7 +9,7 @@
     width: 100%;
     @extend .c-line;
     @include breakpoint(phone) {
-      padding: 9rem 0 7rem 9%;
+      padding: 23.7rem 0 30rem 9%;
     }
     @include breakpoint(tablet) {
       padding: 7.5rem 5.5rem 5.2rem;
@@ -40,19 +40,24 @@
     color: colorFunc(tag, secondary);
     position: relative;
     @include breakpoint(phone) {
-      margin-bottom: 8rem;
+      margin-bottom: 5rem;
     }
     @include breakpoint(tablet) {
       margin-bottom: 4rem;
     }
-    @include breakpoint(desktop) {
+    @include breakpoint(overPhone) {
       float: left;
     }
   }
   &__btns {
-    @include breakpoint(desktop) {
+    @include breakpoint(overPhone) {
       float: right;
-      margin-top: -1.5rem;
+    }
+    @include breakpoint(tablet) {
+      margin-top: -1.3rem;
+    }
+    @include breakpoint(desktop) {
+      margin-top: .5rem;
     }
 
     &__title {
@@ -72,25 +77,25 @@
     background-color: colorFunc(tag, secondary);
     color: colorFunc(tag, tertiary);
     @include breakpoint(phone) {
-      margin-bottom: 8rem;
-    }
-    @include breakpoint(tablet) {
-      margin-right: 2.5rem;
+      margin-bottom: 16rem;
     }
     @include breakpoint(overPhone) {
       display: inline-block;
-    }
-    @include breakpoint(desktop) {
-      margin-right: 2.5rem;
     }
     &:hover {
       color: colorFunc(tag, secondary);
       border-color: colorFunc(tag, secondary);
     }
 
-    &:last-of-type {
+    &.c-btn {
+      @include breakpoint(phone) {
+        min-width: 50rem;
+      }
+      @include breakpoint(tablet) {
+        min-width: 25rem;
+      }
       @include breakpoint(desktop) {
-        margin-right: 0;
+        min-width: 22rem;
       }
     }
   }
