@@ -38,6 +38,9 @@
     @include breakpoint(overPhone) {
       padding: 0 33.3%;
     }
+    @include breakpoint(desktop) {
+      background-size: 37%;
+    }
   }
 
   &__title {
