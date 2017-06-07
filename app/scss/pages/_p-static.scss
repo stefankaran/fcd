@@ -1,0 +1,23 @@
+//----- Page / Static
+.p-static {
+  background-color: colorFunc(bg-sections, primary);
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  @include breakpoint(tablet) {
+    padding-top: 10.5rem;
+  }
+  @include breakpoint(desktop) {
+    padding-top: 14.3rem;
+    padding-bottom: 5rem;
+  }
+
+  .b-article__title {
+    margin-bottom: 4.5rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 3.8rem;
+    }
+    @include breakpoint(desktop) {
+      margin-bottom: 5.8rem;
+    }
+  }
+}

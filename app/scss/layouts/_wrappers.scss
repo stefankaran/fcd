@@ -42,6 +42,18 @@
         @include breakpoint(tablet) { // 550px / Require empty parent for tablet l-t
           padding-right: cp(109px, $site-tab-design);
         }
+
+        .b-article__content {
+          @include breakpoint(overPhone) {
+            float: right;
+          }
+          @include breakpoint(tablet) {
+            width: cp(550px, 659px);
+          }
+          @include breakpoint(desktop) {
+            width: cp(900px, 1050px);
+          }
+        }
       }
     }
     // Example

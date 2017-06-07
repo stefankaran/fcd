@@ -213,6 +213,13 @@ $colors                : (
   videos               : ( //----- Videos page colors
     text               : #fff,
     yt                 : #cd201f
+  ),
+  // 404
+  404               : ( //----- 404 page colors
+    title               : #fff,
+    search              : $brand-primary,
+    icon-bg              : #f0f0f0,
+    icon               : $brand-primary
   )
 );
 

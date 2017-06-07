@@ -59,19 +59,10 @@
     }
   }
   &__content {
-    @include breakpoint(overPhone) {
-      float: right;
-    }
-    @include breakpoint(tablet) {
-      width: cp(550px, 659px);
-    }
-    @include breakpoint(desktop) {
-      width: cp(900px, 1050px);
-    }
 
     p {
       @include font-size(20px, 23px, 38px);
-      @include line-height(38px, 38px, 68px);
+      @include line-height(28px, 38px, 68px);
       margin-bottom: 6.8rem;
       @include breakpoint(overPhone) {
         margin-bottom: 3.8rem;

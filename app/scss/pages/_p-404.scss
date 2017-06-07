@@ -1,2 +1,96 @@
-//----- Page / 404 
-.p-404 {}
+//----- Page / 404
+.p-404 {
+  background-color: colorFunc(bg-sections, primary);
+  // @include breakpoint(phone) {
+  //
+  // }
+  padding-top: 10.8rem;
+  padding-bottom: 11rem;
+  @include breakpoint(tablet) {
+    padding-bottom: 8rem;
+  }
+  @include breakpoint(desktop) {
+    padding-top: 13.2rem;
+    padding-bottom: 15rem;
+  }
+
+  &__body {
+    position: relative;
+  }
+  &__img {}
+  &__content {
+    @include absolute(center);
+    width: 100%;
+    text-align: center;
+    padding: 0 5%;
+  }
+  &__title {
+    color: colorFunc(404, title);
+    @include font-size(50px, 36.7px, 41.5px);
+    @include line-height(52px, 38px, 43px);
+    margin-bottom: 3.5rem;
+    @include breakpoint(overPhone) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__search {
+    max-width: 89%;
+    margin: 0 auto;
+    @include breakpoint(overPhone) {
+      max-width: 74%;
+    }
+
+    &__content {}
+    &__block {
+      position: relative;
+      overflow: hidden;
+    }
+    &__input {
+      border: none;
+      outline: none;
+      padding-left: 2rem;
+      padding-right: 7rem;
+      width: 100%;
+      font-size: 2.5rem;
+      color: colorFunc(404, search);
+      @include breakpoint(phone) {
+        height: 4.5rem;
+      }
+      @include breakpoint(tablet) {
+        height: 4rem;
+      }
+      @include breakpoint(desktop) {
+        height: 5.5rem;
+        padding-right: 8rem;
+      }
+    }
+    &__icon {
+      position: absolute;
+      font-size: 2rem;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 6.5rem;
+      color: colorFunc(404, icon);
+      background-color: colorFunc(404, icon-bg);
+      cursor: pointer;
+      @include breakpoint(tablet) {
+        width: 5.5rem;
+      }
+      @include breakpoint(desktop) {
+        width: 5.5rem;
+      }
+      &:before {
+        @include absolute(center);
+      }
+    }
+  }
+
+  // Reset Wrapper
+  .l-content--article {
+    @include breakpoint(tablet) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
