@@ -128,6 +128,17 @@
   &__results {
     position: relative;
 
+    // To avoid jumping on ajax load
+    @include breakpoint(phone) {
+      height: 34.4rem;
+    }
+    @include breakpoint(tablet) {
+      height: 30.1rem;
+    }
+    @include breakpoint(desktop) {
+      height: 49.5rem;
+    }
+
     &__title {
       font-family: $font-family-primary;
       text-transform: uppercase;

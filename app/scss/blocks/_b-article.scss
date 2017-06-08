@@ -59,6 +59,16 @@
     }
   }
   &__content {
+    .b-article__intro {
+
+      p {
+        @include font-size(27px, 27px, 45px);
+        @include line-height(35px, 42px, 65px);
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
 
     p {
       @include font-size(20px, 23px, 38px);
