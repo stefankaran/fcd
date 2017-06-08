@@ -321,6 +321,16 @@ function dropDownMenu() {
     var school     = new DropDown($('#school'));
     var domains    = new DropDown($('#domains'));
 
+
+  $(document).mouseup(function(e) {
+      var el = $(".c-dd.active");
+
+      // if the target of the click isn't the el nor a descendant of the el
+      if (!el.is(e.target) && el.has(e.target).length === 0)
+      {
+          el.removeClass('active');
+      }
+  });
 }
 
 

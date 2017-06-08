@@ -145,6 +145,7 @@
     width: percentage(1/3);
 
     &__media {
+      position: relative;
       cursor: pointer;
       margin-bottom: 1.6rem;
       @include breakpoint(tablet) {

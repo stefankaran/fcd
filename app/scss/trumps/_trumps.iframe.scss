@@ -1,0 +1,13 @@
+///------------------------------------
+//    #TRUMPS
+//------------------------------------
+
+// Globaly available hacks or overwrits
+
+//----- Better behaviour for iframes
+iframe {
+  @include breakpoint(phone) {
+    width: 1px;
+    min-width: 100%;
+  }
+}

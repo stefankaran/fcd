@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'fcd-iconFont';
-  src:  url('#{$icomoon-font-path}/fcd-iconFont.eot?hh1i28');
-  src:  url('#{$icomoon-font-path}/fcd-iconFont.eot?hh1i28#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/fcd-iconFont.ttf?hh1i28') format('truetype'),
-    url('#{$icomoon-font-path}/fcd-iconFont.woff?hh1i28') format('woff'),
-    url('#{$icomoon-font-path}/fcd-iconFont.svg?hh1i28#fcd-iconFont') format('svg');
+  src:  url('#{$icomoon-font-path}/fcd-iconFont.eot?on05yj');
+  src:  url('#{$icomoon-font-path}/fcd-iconFont.eot?on05yj#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/fcd-iconFont.ttf?on05yj') format('truetype'),
+    url('#{$icomoon-font-path}/fcd-iconFont.woff?on05yj') format('woff'),
+    url('#{$icomoon-font-path}/fcd-iconFont.svg?on05yj#fcd-iconFont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon--pdf {
+  &:before {
+    content: $icon--pdf;
+  }
+}
+.icon--yt-play {
+  &:before {
+    content: $icon--yt-play;
+  }
+}
 .icon--arrow-dot {
   &:before {
     content: $icon--arrow-dot;
@@ -109,6 +119,16 @@
 .icon--youtube {
   &:before {
     content: $icon--youtube;
+  }
+}
+.icon--file {
+  &:before {
+    content: $icon--file;
+  }
+}
+.icon--youtube-play {
+  &:before {
+    content: $icon--youtube-play;
   }
 }
 

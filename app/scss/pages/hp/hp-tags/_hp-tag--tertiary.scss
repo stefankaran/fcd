@@ -145,6 +145,12 @@
           margin-bottom: 2.5rem;
         }
       }
+
+      .icon--yt-play {
+        @include breakpoint(tablet) {
+          font-size: 8rem;
+        }
+      }
     }
     &--small {
       @include breakpoint(phone) {
@@ -186,6 +192,12 @@
           margin-bottom: 1rem;
         }
       }
+
+      .icon--yt-play {
+        @include breakpoint(desktop) {
+          font-size: 5rem;
+        }
+      }
     }
 
     &__type {
@@ -197,6 +209,7 @@
       }
     }
     &__media {
+      position: relative;
       margin-bottom: 3rem;
       @include breakpoint(tablet) {
         margin-bottom: 1.5rem;

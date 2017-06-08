@@ -187,4 +187,44 @@
       }
     }
   }
+
+  h2,
+  h3,
+  h4 {
+    @include font-size(35px, 44px, 55px);
+    margin-bottom: 6.8rem;
+    @include breakpoint(overPhone) {
+      margin-bottom: 3.8rem;
+    }
+  }
+  ol {
+    list-style: decimal;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol,
+  ul {
+    padding-left: 6%;
+    margin-bottom: 6.8rem;
+    @include breakpoint(overPhone) {
+      margin-bottom: 3.8rem;
+      padding-left: 3%;
+    }
+  }
+  li {
+    @include font-size(20px, 23px, 38px);
+    @include line-height(28px, 38px, 68px);
+    margin-bottom: 1rem;
+  }
+  twitterwidget,
+  iframe {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 6.8rem !important; // important because some iframes and wwitter/instagram etc embeds has js default margins
+    @include breakpoint(overPhone) {
+      margin-bottom: 3.8rem !important; // important because some iframes and wwitter/instagram etc embeds has js default margins
+    }
+  }
 }

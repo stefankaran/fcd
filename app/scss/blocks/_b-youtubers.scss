@@ -107,6 +107,7 @@
   &__item {
 
     &__media {
+      position: relative;
       margin-bottom: 1.9rem;
       @include breakpoint(tablet) {
         margin-bottom: 1.3rem;

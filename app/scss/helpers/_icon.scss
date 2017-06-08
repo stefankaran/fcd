@@ -8,4 +8,19 @@
       z-index: z(min);
     }
   }
+  &--yt-play {
+    @include absolute(center);
+    @include font-size(80px, 50px, 80px);
+    color: colorFunc(videos, yt);
+
+    // not transparent option
+    &:after {
+      content: '';
+      width: 50%;
+      height: 50%;
+      background: white;
+      @include absolute(center);
+      z-index: z(min) - 2;
+    }
+  }
 }
