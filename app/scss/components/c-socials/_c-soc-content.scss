@@ -28,6 +28,9 @@
     @include breakpoint(desktop) {
       margin-bottom: 2rem;
     }
+    &--whatsapp {
+      @include hide(desktop);
+    }
   }
   &__trigger {
     @include hide(overPhone);

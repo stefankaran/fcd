@@ -119,6 +119,10 @@ $colors                : (
     text               : #fff,
     hover-mask         : #000
   ),
+  c-pagination         : ( //----- pagination colors
+    bg                 : #cccccc,
+    text               : $brand-primary
+  ),
 
   slider               : ( //----- slider, some global colors
     arrows-prim        : #000,
@@ -215,10 +219,10 @@ $colors                : (
     yt                 : #cd201f
   ),
   // 404
-  404               : ( //----- 404 page colors
-    title               : #fff,
-    search              : $brand-primary,
-    icon-bg              : #f0f0f0,
+  404                  : ( //----- 404 page colors
+    title              : #fff,
+    search             : $brand-primary,
+    icon-bg            : #f0f0f0,
     icon               : $brand-primary
   )
 );

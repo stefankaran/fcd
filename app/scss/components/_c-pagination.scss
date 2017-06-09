@@ -1,2 +1,131 @@
 //----- Pagination
-.c-pagination  {}
+.c-pagination  {
+  background-color: colorFunc(c-pagination, bg);
+  color: colorFunc(c-pagination, text);
+  @include breakpoint(phone) {
+    padding: 0 3%;
+  }
+
+  &__body {
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(phone) {
+      padding: 18.2rem 0 7.5rem;
+    }
+    @include breakpoint(tablet) {
+      padding: 9.6rem 0 4.4rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 3rem 0 3.8rem;
+    }
+  }
+
+  // Same style for every list
+  &__list {
+    display: inline-block;
+
+    // Style only for list with text
+    &--text {
+      @include breakpoint(toDesktop) {
+        width: 50%;
+      }
+      @include breakpoint(desktop) {
+        width: 40%;
+        min-height: 1px;
+      }
+      .c-pagination__item {
+        @include font-size(20px, 20px, 30px);
+        @include breakpoint(phone) {
+          margin-right: 5rem;
+        }
+        @include breakpoint(tablet) {
+          margin-right: 7rem;
+        }
+        @include breakpoint(desktop) {
+          margin-right: 9rem;
+          margin-top: 1rem;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // Style only for list with numbers
+    &--num {
+      text-align: center;
+      @include breakpoint(toDesktop) {
+        @include absolute(center-horizontal);
+        width: 100%;
+      }
+      @include breakpoint(phone) {
+        top: 6.2rem;
+      }
+      @include breakpoint(tablet) {
+        top: 3.2rem;
+      }
+      @include breakpoint(desktop) {
+        width: 20%;
+      }
+      .c-pagination__item {
+        @include font-size(32.75px, 38px, 55px);
+        @include breakpoint(phone) {
+          margin-right: 16.5rem;
+        }
+        @include breakpoint(tablet) {
+          margin-right: 8rem;
+        }
+        @include breakpoint(desktop) {
+          margin-right: 5.6rem;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // Style only for previous list (prev one, and go to first)
+    &--prev {
+      text-align: right;
+      @include breakpoint(toDesktop) {
+        float: left;
+      }
+      @include breakpoint(phone) {
+        padding-right: 6%;
+      }
+      @include breakpoint(tablet) {
+        padding-right: 8%;
+      }
+      @include breakpoint(desktop) {
+        float: left;
+        padding-right: 5%;
+      }
+    }
+
+    // Style only for next list (next one, and go to last)
+    &--next {
+      text-align: left;
+      @include breakpoint(toDesktop) {
+        float: right;
+      }
+      @include breakpoint(phone) {
+        padding-left: 6%;
+      }
+      @include breakpoint(tablet) {
+        padding-left: 8%;
+      }
+      @include breakpoint(desktop) {
+        float: right;
+        padding-left: 5%;
+      }
+    }
+  }
+  &__item {
+    display: inline-block;
+
+    &.current {
+      border-bottom: 1px solid;
+    }
+  }
+  &__link {}
+}
