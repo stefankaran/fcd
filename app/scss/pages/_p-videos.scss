@@ -155,14 +155,30 @@
       @include breakpoint(desktop) {
         max-width: 75%;
       }
+
+      .icon--video-play {
+        right: 3%;
+        bottom: 6%;
+        @include font-size(85.5px, 60px, 70px);
+
+        // reset default
+        top: auto;
+        left: auto;
+        @include vendor-prefixes(transform, translate(0, 0));
+      }
     }
     &__img {}
     &__icon {
-      position: absolute;
-      right: 3%;
-      bottom: 6%;
-      @include font-size(85.5px, 60px, 70px);
-      color: colorFunc(tag, secondary);
+      // position: absolute;
+      // color: colorFunc(tag, secondary);
+      // right: 3%;
+      // bottom: 6%;
+      // @include font-size(85.5px, 60px, 70px);
+
+      // reset default
+      // top: auto;
+      // left: auto;
+
     }
   }
 

@@ -146,7 +146,7 @@
         }
       }
 
-      .icon--yt-play {
+      .icon--video-play {
         @include breakpoint(tablet) {
           font-size: 8rem;
         }
@@ -193,7 +193,7 @@
         }
       }
 
-      .icon--yt-play {
+      .icon--video-play {
         @include breakpoint(desktop) {
           font-size: 5rem;
         }
