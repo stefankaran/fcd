@@ -1,2 +1,80 @@
 //----- Page / Search
-.p-search {}
+.p-search {
+  background-color: colorFunc(bg-sections, primary);
+
+  &__body {
+    @include breakpoint(toDesktop) {
+      padding-top: 9.2rem;
+    }
+    @include breakpoint(desktop) {
+      padding-top: 10.5rem;
+    }
+  }
+  &__title {
+    @include line-height(45px, 32px, 40px);
+    color: colorFunc(h1, primary);
+    text-align: center;
+
+
+    &--num {
+      @include font-size(50px, 32px, 40px);
+      display: block;
+      color: colorFunc(h1, secondary);
+    }
+  }
+
+  &__categories {}
+  &__category {
+    @include breakpoint(phone) {
+      padding-top: 7.5rem;
+      padding-bottom: 6.5rem;
+    }
+    @include breakpoint(tablet) {
+      padding-top: 7rem;
+      padding-bottom: 2.5rem;
+    }
+    @include breakpoint(desktop) {
+      padding-top: 9rem;
+      padding-bottom: 5.5rem;
+    }
+    &:nth-child(even) {
+      background-color: colorFunc(p-search, section-even);
+    }
+    &:last-of-type {
+      @include breakpoint(phone) {
+        padding-bottom: 11.5rem;
+      }
+      @include breakpoint(tablet) {
+        padding-bottom: 5rem;
+      }
+    }
+
+    &__title {
+      @include font-size(50px, 34px, 40px);
+      margin-bottom: 4.2rem;
+    }
+  }
+
+  .c-media {
+
+    &:nth-of-type(2n+1) {
+      @include breakpoint(phone) {
+        clear: both;
+      }
+    }
+    &:nth-of-type(4n+1) {
+      @include breakpoint(overPhone) {
+        clear: both;
+      }
+    }
+  }
+  .c-pagination {
+    background-color: transparent;
+    @include breakpoint(toDesktop) {
+      margin-top: 2rem;
+    }
+    @include breakpoint(desktop) {
+      margin-top: 1rem;
+    }
+  }
+}

@@ -34,7 +34,8 @@ $colors                : (
   ),
 
   h1                   : ( //----- h1 colors
-    primary            : $brand-primary
+    primary            : $brand-primary,
+    secondary          : #000
   ),
 
   nav-header           : ( //----- nav-header colors
@@ -217,6 +218,10 @@ $colors                : (
   videos               : ( //----- Videos page colors
     text               : #fff,
     yt                 : #cd201f
+  ),
+  // Search
+  p-search               : ( //----- Search page colors
+    section-even         : #fff
   ),
   // 404
   404                  : ( //----- 404 page colors
