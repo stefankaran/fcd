@@ -149,8 +149,9 @@ $colors                : (
     primary            : brand-primary,
     secondary          : brand-primary
   ),
-  error                : ( //----- Error colors
-    color              : #ff0000
+  helpers              : ( //----- Helpers colors
+    error              : #ff0000,
+    success            : green
   ),
 
   //----- Pages

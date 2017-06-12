@@ -28,6 +28,9 @@
       display: block;
       font-weight: $font-weight-regular;
     }
+    &--bold {
+      font-weight: $font-weight-bold;
+    }
   }
 
   &__slider {

@@ -8,6 +8,7 @@
   }
   &__date {
     font-family: $font-family-quinary;
+    font-style: italic;
     @include font-size(24px, 18px, 28px);
     @include breakpoint(phone) {
       margin-bottom: 1.5rem;
@@ -79,7 +80,8 @@
       }
     }
   }
-  &__video {
+  &__video,
+  img {
     margin-bottom: 6rem;
     @include breakpoint(overPhone) {
       margin-bottom: 4.25rem;
