@@ -149,7 +149,7 @@ $colors                : (
     primary            : brand-primary,
     secondary          : brand-primary
   ),
-  helpers              : ( //----- Helpers colors
+  form                 : ( //----- Form colors
     error              : #ff0000,
     success            : green
   ),
@@ -221,8 +221,8 @@ $colors                : (
     yt                 : #cd201f
   ),
   // Search
-  p-search               : ( //----- Search page colors
-    section-even         : #fff
+  p-search             : ( //----- Search page colors
+    section-even       : #fff
   ),
   // 404
   404                  : ( //----- 404 page colors

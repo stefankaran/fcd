@@ -47,13 +47,13 @@
       z-index: z(min) + 2;
       background-color: colorFunc(c-newsletter, input-c);
       @include placeholder {
-        color: colorFunc(helpers, error);
+        color: colorFunc(form, error);
       }
     }
     .c-newsletter__icon {
       position: relative;
       z-index: z(min) + 2;
-      color: colorFunc(helpers, error);
+      color: colorFunc(form, error);
     }
 
     &:after {
@@ -72,10 +72,10 @@
   &.success {
     .c-newsletter__input {
       background-color: colorFunc(c-newsletter, input-c);
-      color: colorFunc(helpers, success);
+      color: colorFunc(form, success);
     }
     .c-newsletter__icon {
-      color: colorFunc(helpers, success);
+      color: colorFunc(form, success);
     }
   }
 }
