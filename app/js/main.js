@@ -1,5 +1,27 @@
 $(document).ready(function() {
 
+    adaptiveHeight('.p-search');
+
+
+    // WB.adaptiveHeight = function(page) {
+    function adaptiveHeight(page) {
+
+        var headerHeight = $(".b-header__top").outerHeight();
+        var footerHeight = $(".b-footer").outerHeight();
+        var windowHeight = $(window).height();
+        var htmlHeight   = $("html").height();
+
+        if (htmlHeight < windowHeight) {
+            $(page).css({
+                'height': (windowHeight - (headerHeight + footerHeight) + 'px')
+            });
+        }
+
+    };
+
+
+
+
     stickyPosition(170, 70);
 
     function stickyPosition(offTop, offBottom) {
