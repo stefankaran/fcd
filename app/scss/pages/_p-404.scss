@@ -1,9 +1,6 @@
 //----- Page / 404
 .p-404 {
   background-color: colorFunc(bg-sections, primary);
-  // @include breakpoint(phone) {
-  //
-  // }
   padding-top: 10.8rem;
   padding-bottom: 11rem;
   @include breakpoint(tablet) {

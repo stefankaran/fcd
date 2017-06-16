@@ -167,19 +167,6 @@
         @include vendor-prefixes(transform, translate(0, 0));
       }
     }
-    &__img {}
-    &__icon {
-      // position: absolute;
-      // color: colorFunc(tag, secondary);
-      // right: 3%;
-      // bottom: 6%;
-      // @include font-size(85.5px, 60px, 70px);
-
-      // reset default
-      // top: auto;
-      // left: auto;
-
-    }
   }
 
   .b-youtubers {

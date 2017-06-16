@@ -56,21 +56,12 @@
         width: 20%;
         z-index: z(min) - 1;
       }
-      // @include breakpoint(phone) {
-      //   width: 10%;
-      // }
     }
     &:before {
       left: -20%;
-      // @include breakpoint(phone) {
-      //   left: -10%;
-      // }
     }
     &:after {
       right: -20%;
-      // @include breakpoint(phone) {
-      //   right: -10%;
-      // }
     }
 
     &__head {

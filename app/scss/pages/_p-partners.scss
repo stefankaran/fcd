@@ -46,7 +46,6 @@
     &__title {
       @include font-size(50px, 34px, 40px);
       @include line-height(50px, 34px, 30px);
-      // font-weight: $font-weight-bold;
       position: relative;
       z-index: z(min);
       display: inline-block;

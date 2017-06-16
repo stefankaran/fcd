@@ -18,14 +18,6 @@
   @include vendor-prefixes(border-radius, 1px);
   width: 31.3rem;
   height: 7.8rem;
-  // @include breakpoint(phone) {
-    // padding-left: 9%;
-    // padding-right: 9%;
-  // }
-  // @include breakpoint(overPhone) {
-  //   padding-left: .5rem;
-  //   padding-right: .5rem;
-  // }
   @include breakpoint(tablet) {
     width: 14.4rem;
     height: 3.6rem;

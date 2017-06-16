@@ -126,6 +126,8 @@
 
     &.current {
       border-bottom: 1px solid;
+      pointer-events: none;
+      cursor: default;
     }
   }
   &__link {}

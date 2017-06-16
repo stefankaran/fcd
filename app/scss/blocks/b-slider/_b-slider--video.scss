@@ -37,6 +37,7 @@
     }
   }
 
+  // If bg titles must be inside wrap, instead of full-width
   // &__wrap {
     // position: relative;
     // overflow: hidden;
@@ -182,6 +183,9 @@
     @include breakpoint(desktop) {
       left: 5.5rem;
       bottom: 1rem;
+    }
+    span {
+      letter-spacing: -3px;
     }
 
     &__big {

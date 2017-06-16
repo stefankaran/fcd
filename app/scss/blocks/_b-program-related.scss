@@ -89,14 +89,14 @@
       .b-program-related__slide {
         @include breakpoint(tablet) {
           // Tablet width ==> title and only 1 program
-          width: cp(220px, 660px) !important; ///// Overide slick width
+          width: cp(220px, 660px) !important; // Overide slick width
         }
 
         // Only slide with title
         &--withTitle {
           @include breakpoint(tablet) {
             // Tablet width ==> title and only 1 program
-            width: cp(440px, 660px) !important; ///// Overide slick width
+            width: cp(440px, 660px) !important; // Overide slick width
           }
         }
 
